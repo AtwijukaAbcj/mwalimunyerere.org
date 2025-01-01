@@ -1,0 +1,416 @@
+[14-Jul-2024 06:16:34 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[14-Jul-2024 06:16:34 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[14-Jul-2024 06:16:34 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[14-Jul-2024 06:23:17 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[14-Jul-2024 06:23:17 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[14-Jul-2024 06:23:17 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:57:14 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:57:14 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:57:14 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:58:50 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:58:50 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:58:50 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:59:05 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:59:05 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:59:05 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:59:34 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:59:34 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 09:59:34 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:00:12 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:00:12 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:00:12 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: department in /home/centric/public_html/rqstns/edit_requisition.php on line 37
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: pay_to in /home/centric/public_html/rqstns/edit_requisition.php on line 38
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: description in /home/centric/public_html/rqstns/edit_requisition.php on line 39
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: tik_currency in /home/centric/public_html/rqstns/edit_requisition.php on line 40
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: amount_figure in /home/centric/public_html/rqstns/edit_requisition.php on line 41
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: amount_words in /home/centric/public_html/rqstns/edit_requisition.php on line 42
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: mode_of_payment in /home/centric/public_html/rqstns/edit_requisition.php on line 43
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: advance_payment in /home/centric/public_html/rqstns/edit_requisition.php on line 44
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: previous_payments in /home/centric/public_html/rqstns/edit_requisition.php on line 45
+[17-Jul-2024 13:01:09 Africa/Kampala] PHP Notice:  Undefined index: budget_reference in /home/centric/public_html/rqstns/edit_requisition.php on line 46
+[17-Jul-2024 10:01:31 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:01:31 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:01:31 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:02:28 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:02:28 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:02:28 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:02:47 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:02:47 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:02:47 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:03:42 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:03:42 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:03:42 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:03:46 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:03:46 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Jul-2024 10:03:46 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/centric/public_html/rqstns/requisitions.php on line 2
+[17-Aug-2024 02:09:50 UTC] PHP Warning:  require_once(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/banner.php on line 2
+[17-Aug-2024 02:09:50 UTC] PHP Fatal error:  require_once(): Failed opening required 'config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/banner.php on line 2
+[17-Aug-2024 02:09:56 UTC] PHP Warning:  require_once(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/banner.php on line 2
+[17-Aug-2024 02:09:56 UTC] PHP Fatal error:  require_once(): Failed opening required 'config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/banner.php on line 2
+[17-Aug-2024 02:16:48 UTC] PHP Warning:  require_once(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/view_banners.php on line 2
+[17-Aug-2024 02:16:48 UTC] PHP Fatal error:  require_once(): Failed opening required 'config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/view_banners.php on line 2
+[17-Aug-2024 02:16:51 UTC] PHP Warning:  require_once(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/view_banners.php on line 2
+[17-Aug-2024 02:16:51 UTC] PHP Fatal error:  require_once(): Failed opening required 'config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/view_banners.php on line 2
+[17-Aug-2024 02:17:03 UTC] PHP Warning:  require_once(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/view_banners.php on line 2
+[17-Aug-2024 02:17:03 UTC] PHP Fatal error:  require_once(): Failed opening required 'config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/view_banners.php on line 2
+[04-Sep-2024 05:48:42 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_course.php on line 2
+[04-Sep-2024 05:48:42 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_course.php on line 2
+[04-Sep-2024 05:48:42 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/add_course.php on line 2
+[04-Sep-2024 05:48:42 UTC] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_course.php on line 15
+[04-Sep-2024 05:48:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/add_course.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_course.php on line 15
+[04-Sep-2024 05:48:49 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_course.php on line 2
+[04-Sep-2024 05:48:49 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_course.php on line 2
+[04-Sep-2024 05:48:49 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/add_course.php on line 2
+[04-Sep-2024 05:48:49 UTC] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_course.php on line 15
+[04-Sep-2024 05:48:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/add_course.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_course.php on line 15
+[04-Sep-2024 08:51:34 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_course.php on line 21
+[04-Sep-2024 08:51:34 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/add_course.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_course.php on line 21
+[22-Sep-2024 14:23:08 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/manage_programs.php on line 13
+[22-Sep-2024 14:23:08 Africa/Kampala] PHP Notice:  Trying to get property 'connect_error' of non-object in /home/suacug/public_html/admin/manage_programs.php on line 13
+[22-Sep-2024 14:23:08 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/manage_programs.php on line 18
+[22-Sep-2024 14:23:08 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/manage_programs.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/manage_programs.php on line 18
+[22-Sep-2024 14:25:15 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/manage_programs.php on line 13
+[22-Sep-2024 14:25:15 Africa/Kampala] PHP Notice:  Trying to get property 'connect_error' of non-object in /home/suacug/public_html/admin/manage_programs.php on line 13
+[22-Sep-2024 14:25:15 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/manage_programs.php on line 18
+[22-Sep-2024 14:25:15 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/manage_programs.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/manage_programs.php on line 18
+[22-Sep-2024 14:25:18 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/manage_programs.php on line 13
+[22-Sep-2024 14:25:18 Africa/Kampala] PHP Notice:  Trying to get property 'connect_error' of non-object in /home/suacug/public_html/admin/manage_programs.php on line 13
+[22-Sep-2024 14:25:18 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/manage_programs.php on line 18
+[22-Sep-2024 14:25:18 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/manage_programs.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/manage_programs.php on line 18
+[23-Sep-2024 18:39:22 UTC] PHP Notice:  Undefined variable: levels_result in /home/suacug/public_html/admin/manage_programs.php on line 38
+[23-Sep-2024 18:39:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/suacug/public_html/admin/manage_programs.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/manage_programs.php on line 38
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 21:58:45 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 236
+[23-Sep-2024 22:04:55 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/suacug/public_html/admin/manage_programs.php:58
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/manage_programs.php on line 58
+[23-Sep-2024 22:06:36 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/suacug/public_html/admin/manage_programs.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/manage_programs.php on line 59
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:37 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:39 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 22:07:54 Africa/Kampala] PHP Notice:  Undefined index: duration_years in /home/suacug/public_html/admin/manage_programs.php on line 237
+[23-Sep-2024 23:03:04 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 41
+[23-Sep-2024 23:03:04 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 41
+[24-Sep-2024 01:39:21 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 41
+[24-Sep-2024 01:39:21 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 41
+[24-Sep-2024 01:42:15 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:42:15 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:45:09 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:45:09 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:46:33 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:46:33 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:53:10 Africa/Kampala] PHP Warning:  mkdir(): Permission denied in /home/suacug/public_html/admin/add_people.php on line 28
+[24-Sep-2024 01:53:10 Africa/Kampala] PHP Warning:  move_uploaded_file(/adminuploads/people/people_66f1f15653b259.35655310.jpg): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_people.php on line 32
+[24-Sep-2024 01:53:10 Africa/Kampala] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2qxxQZ' to '/adminuploads/people/people_66f1f15653b259.35655310.jpg' in /home/suacug/public_html/admin/add_people.php on line 32
+[24-Sep-2024 01:53:10 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:53:10 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:55:39 Africa/Kampala] PHP Warning:  mkdir(): Permission denied in /home/suacug/public_html/admin/add_people.php on line 28
+[24-Sep-2024 01:55:39 Africa/Kampala] PHP Warning:  move_uploaded_file(/admin/uploads/people/people_66f1f1eb28fd92.52680912.jpg): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_people.php on line 32
+[24-Sep-2024 01:55:39 Africa/Kampala] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpvPeQSU' to '/admin/uploads/people/people_66f1f1eb28fd92.52680912.jpg' in /home/suacug/public_html/admin/add_people.php on line 32
+[24-Sep-2024 01:55:39 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 01:55:39 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 02:03:23 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/add_people.php on line 42
+[24-Sep-2024 02:03:23 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/add_people.php:42
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_people.php on line 42
+[27-Sep-2024 11:12:36 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_banner.php on line 2
+[27-Sep-2024 11:12:36 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_banner.php on line 2
+[27-Sep-2024 11:12:36 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/add_banner.php on line 2
+[27-Sep-2024 11:12:36 UTC] PHP Notice:  Undefined variable: con in /home/suacug/public_html/admin/add_banner.php on line 6
+[27-Sep-2024 11:12:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/add_banner.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_banner.php on line 6
+[27-Sep-2024 11:15:52 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_banner.php on line 2
+[27-Sep-2024 11:15:52 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/suacug/public_html/admin/add_banner.php on line 2
+[27-Sep-2024 11:15:52 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/suacug/public_html/admin/add_banner.php on line 2
+[27-Sep-2024 11:15:52 UTC] PHP Notice:  Undefined variable: con in /home/suacug/public_html/admin/add_banner.php on line 6
+[27-Sep-2024 11:15:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/add_banner.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/add_banner.php on line 6
+[28-Sep-2024 16:08:33 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:08:33 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:10:08 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:10:08 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:11:22 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:11:22 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:12:13 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:12:13 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:12:17 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:12:17 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:13:02 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:13:02 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:14:27 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:14:27 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:14:29 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:14:29 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:17:32 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:17:32 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:17:36 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:17:36 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:17:55 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:17:55 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:25:59 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:25:59 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:26:25 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:26:25 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:49:39 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:49:39 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:49:46 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:49:46 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:50:47 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 16:50:47 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:07:41 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:07:41 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:16:48 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:16:48 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:17:41 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:17:41 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:17:56 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:17:56 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:20:19 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:20:19 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:20:51 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:20:51 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:21:32 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:21:32 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:23:11 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:23:11 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:24:35 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:24:35 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:50:56 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:50:56 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:52:41 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:52:41 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:52:44 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:52:44 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:52:58 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:52:58 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:55:02 Africa/Kampala] PHP Notice:  Undefined variable: edit_data in /home/suacug/public_html/admin/add_banner.php on line 71
+[28-Sep-2024 17:55:02 Africa/Kampala] PHP Notice:  Undefined variable: edit_data in /home/suacug/public_html/admin/add_banner.php on line 75
+[28-Sep-2024 17:55:02 Africa/Kampala] PHP Notice:  Undefined variable: edit_data in /home/suacug/public_html/admin/add_banner.php on line 79
+[28-Sep-2024 17:55:02 Africa/Kampala] PHP Notice:  Undefined variable: edit_data in /home/suacug/public_html/admin/add_banner.php on line 83
+[28-Sep-2024 17:55:42 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:55:42 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:56:03 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:56:03 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:58:38 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:58:38 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:58:40 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:58:40 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:59:02 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:59:02 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:59:05 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:59:05 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner_trends.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner_trends.php on line 13
+[28-Sep-2024 17:59:39 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner.php on line 13
+[28-Sep-2024 17:59:39 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/suacug/public_html/admin/edit_banner.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner.php on line 13
+[28-Sep-2024 18:00:32 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner.php on line 11
+[28-Sep-2024 18:00:32 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/edit_banner.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner.php on line 11
+[28-Sep-2024 18:04:35 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner.php on line 12
+[28-Sep-2024 18:04:35 Africa/Kampala] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/suacug/public_html/admin/edit_banner.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/suacug/public_html/admin/edit_banner.php on line 12
+[28-Sep-2024 18:06:05 Africa/Kampala] PHP Notice:  Undefined variable: conn in /home/suacug/public_html/admin/edit_banner.php on line 11

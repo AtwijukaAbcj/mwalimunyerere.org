@@ -1,0 +1,9 @@
+[16-Dec-2024 12:03:31 Africa/Kampala] PHP Warning:  Undefined variable $undefinedVariable in C:\xampp\htdocs\mwalimunyerere.org\admin\index.php on line 13
+[16-Dec-2024 12:03:31 Africa/Kampala] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\mwalimunyerere.org\admin\index.php on line 15
+[16-Dec-2024 12:03:51 Africa/Kampala] PHP Warning:  Undefined variable $undefinedVariable in C:\xampp\htdocs\mwalimunyerere.org\admin\index.php on line 13
+[16-Dec-2024 12:03:51 Africa/Kampala] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\mwalimunyerere.org\admin\index.php on line 15
+[16-Dec-2024 12:03:51 Africa/Kampala] PHP Warning:  Undefined variable $undefinedVariable in C:\xampp\htdocs\mwalimunyerere.org\admin\dash.php on line 12
+[16-Dec-2024 12:03:51 Africa/Kampala] PHP Warning:  Undefined variable $undefinedVariable in C:\xampp\htdocs\mwalimunyerere.org\admin\header.php on line 10
+[16-Dec-2024 12:04:48 Africa/Kampala] PHP Warning:  Undefined variable $undefinedVariable in C:\xampp\htdocs\mwalimunyerere.org\admin\index.php on line 13
+[16-Dec-2024 12:04:48 Africa/Kampala] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\mwalimunyerere.org\admin\index.php on line 15
+[16-Dec-2024 12:15:44 Africa/Kampala] PHP Warning:  Undefined variable $undefinedVariable in C:\xampp\htdocs\mwalimunyerere.org\admin\header.php on line 10

@@ -1,0 +1,12 @@
+{
+	"business_name": "Testing",
+	"business_type": "Capture fish",
+	"location": "Central",
+	"service": "Fish Farmer",
+	"postal_address": "Kampala",
+	"phone_number": "0771234567",
+	"email_address": "abc@domain.com",
+	"website": "https://abc.com",
+	"description": "Testing",
+	"user": 3
+}

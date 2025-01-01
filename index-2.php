@@ -221,110 +221,122 @@ $colorIndex = 0;
         <div class="row">
             <!-- Upcoming Events -->
             <div class="col-12 col-lg-6">
-                <div class="upcoming-events">
-                    <div class="section-heading mb-4">
-                        <h2 class="entry-title">Upcoming Events</h2>
-                    </div><!-- .section-heading -->
-
-                    <?php if ($result_events && $result_events->num_rows > 0): ?>
-                        <?php while ($row = $result_events->fetch_assoc()): ?>
-                            <!-- Event Card -->
-                            <div class="event-wrap d-flex align-items-center mb-4" style="background-color: <?= $colors[$colorIndex++ % count($colors)]; ?>; border-radius: 5px; padding: 15px;">
-                                <!-- Image Section -->
-                                <figure class="m-0" style="flex: 0 0 150px; margin-right: 15px;">
-                                    <img src="<?= htmlspecialchars($row['image']); ?>" alt="<?= htmlspecialchars($row['title']); ?>" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;">
-                                </figure>
-
-                                <!-- Content Section -->
-                                <div class="event-content-wrap text-white flex-grow-1">
-                                    <header class="entry-header">
-                                        <h3 class="entry-title m-0"><a href="#" class="text-white" style="text-decoration: none;"><?= htmlspecialchars($row['title']); ?></a></h3>
-                                        <div class="posted-date mt-2">
-                                            <span><i class="fa fa-calendar"></i> <?= date("M d, Y", strtotime($row['event_date'])); ?> | <i class="fa fa-clock"></i> <?= htmlspecialchars($row['event_time']); ?></span>
-                                        </div>
-                                        <div class="cats-links mt-1">
-                                            <span><i class="fa fa-map-marker"></i> <?= htmlspecialchars($row['location']); ?></span>
-                                        </div>
-                                    </header>
-
-                                    <div class="entry-content mt-3">
-                                        <p class="m-0"><?= htmlspecialchars(substr($row['description'], 0, 100)); ?>...</p>
-                                    </div>
-
-                                    <div class="entry-footer mt-3">
-                                        <a<a href="#" class="btn btn-light btn-bg" style="color: #8E3951; border-radius: 5px; padding: 12px 24px; font-size: 16px;">Read More</a>
-
-                                    </div>
-                                </div>
+                <div class="card shadow-sm mb-4" style="border-radius: 5px; border: 1px solid rgba(73, 0, 87, 0.42); background:rgba(108, 5, 128, 0.13);">
+                    <div class="card-body">
+                        <div class="upcoming-events">
+                            <div class="section-heading mb-4">
+                                <h2 class="entry-title text-maroon">Upcoming Events</h2>
                             </div>
-                        <?php endwhile; ?>
-                    <?php else: ?>
-                        <p>No events found.</p>
-                    <?php endif; ?>
 
-                    <!-- Button to all events -->
-                    <div class="text-center mt-4">
-                        <a href="events.php" class="btn btn-maroon" style="padding: 10px 20px; border-radius: 5px;">View All Events</a>
-                    </div>
-                </div>
-            </div><!-- .col -->
+                            <?php if ($result_events && $result_events->num_rows > 0): ?>
+                                <?php while ($row = $result_events->fetch_assoc()): ?>
+                                    <!-- Event Card -->
+                                    <div class="event-wrap d-flex align-items-center mb-4" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                        <!-- Image Section -->
+                                        <figure class="m-0" style="flex: 0 0 120px; margin-right: 20px;">
+                                            <img src="<?= htmlspecialchars($row['image']); ?>" alt="<?= htmlspecialchars($row['title']); ?>" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px;">
+                                        </figure>
 
-<!-- Featured Cause Section -->
-<div class="col-12 col-lg-6">
-    <div class="featured-cause p-4 bg-light shadow-sm" style="border-radius: 5px;">
-        <div class="section-heading mb-4">
-            <h2 class="entry-title text-center">Featured Cause</h2>
-        </div>
+                                        <!-- Content Section -->
+                                        <div class="event-content-wrap flex-grow-1">
+                                            <header class="entry-header">
+                                                <h3 class="entry-title m-0"><a href="#" class="text-dark" style="text-decoration: none;"><?= htmlspecialchars($row['title']); ?></a></h3>
+                                                <div class="posted-date mt-2">
+                                                    <span><i class="fa fa-calendar text-maroon"></i> <?= date("M d, Y", strtotime($row['event_date'])); ?> | <i class="fa fa-clock text-maroon"></i> <?= htmlspecialchars($row['event_time']); ?></span>
+                                                </div>
+                                                <div class="cats-links mt-1">
+                                                    <span><i class="fa fa-map-marker text-maroon"></i> <?= htmlspecialchars($row['location']); ?></span>
+                                                </div>
+                                            </header>
 
-        <?php if ($cause): ?>
-            <div class="cause-wrap">
-                <!-- Cause Image -->
-                <img src="<?= htmlspecialchars($cause['image_url']); ?>" 
-                     alt="<?= htmlspecialchars($cause['title']); ?>" 
-                     class="img-fluid rounded mb-3" 
-                     style="width: 100%; border-radius: 5px; object-fit: cover; max-height: 250px;">
+                                            <div class="entry-content mt-2">
+                                                <p class="m-0"><?= htmlspecialchars(substr($row['description'], 0, 100)); ?>...</p>
+                                            </div>
 
-                <!-- Cause Content -->
-                <div class="cause-content-wrap">
-                    <h3 class="text-center text-primary"><?= htmlspecialchars($cause['title']); ?></h3>
-                    <p class="text-muted"><?= htmlspecialchars($cause['description']); ?></p>
+                                            <div class="entry-footer mt-3">
+                                                <a href="#" class="btn btn-light btn-bg" style="color: #8E3951; border-radius: 5px; padding: 10px 20px; font-size: 14px;">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php else: ?>
+                                <p>No events found.</p>
+                            <?php endif; ?>
 
-                    <div class="fund-raised text-center">
-                        <p class="mb-2">
-                            <strong>Raised:</strong> $<?= number_format($cause['raised'], 2); ?> 
-                            |
-                            <strong>Goal:</strong> $<?= number_format($cause['goal'], 2); ?>
-                        </p>
-                        <div class="progress" style="height: 20px; border-radius: 5px;">
-                            <?php 
-                                $progress = min(100, ($cause['raised'] / $cause['goal']) * 100); 
-                            ?>
-                            <div class="progress-bar bg-success" 
-                                 role="progressbar" 
-                                 style="width: <?= $progress; ?>%;" 
-                                 aria-valuenow="<?= $progress; ?>" 
-                                 aria-valuemin="0" 
-                                 aria-valuemax="100">
-                                <?= round($progress, 2); ?>%
+                            <!-- Button to all events -->
+                            <div class="text-center mt-4">
+                                <a href="events.php" class="btn btn-maroon" style="padding: 12px 24px; border-radius: 5px; font-size: 16px;">View All Events</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- End of Upcoming Events -->
 
-                    <!-- Donate Button -->
-                    <div class="text-center mt-4">
-                        <a href="<?= htmlspecialchars($cause['button_link']); ?>" 
-                           class="btn btn-lg" 
-                           style="background: maroon; color: white; border-radius: 5px; padding: 10px 20px;">
-                            <?= htmlspecialchars($cause['button_text']); ?>
-                        </a>
+            <!-- Featured Cause Section -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm mb-4" style="border-radius: 5px; border: 1px solid #ddd;">
+                    <div class="card-body">
+                        <div class="featured-cause p-4">
+                            <div class="section-heading mb-4">
+                                <h2 class="entry-title text-center text-maroon">Featured Cause</h2>
+                            </div>
+
+                            <?php if ($cause): ?>
+                                <div class="cause-wrap">
+                                    <!-- Cause Image -->
+                                    <img src="<?= htmlspecialchars($cause['image_url']); ?>" 
+                                         alt="<?= htmlspecialchars($cause['title']); ?>" 
+                                         class="img-fluid rounded mb-3" 
+                                         style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 250px;">
+
+                                    <!-- Cause Content -->
+                                    <div class="cause-content-wrap">
+                                        <h3 class="text-center text-primary"><?= htmlspecialchars($cause['title']); ?></h3>
+                                        <p class="text-muted"><?= htmlspecialchars($cause['description']); ?></p>
+
+                                        <div class="fund-raised text-center">
+                                            <p class="mb-2">
+                                                <strong>Raised:</strong> $<?= number_format($cause['raised'], 2); ?> 
+                                                |
+                                                <strong>Goal:</strong> $<?= number_format($cause['goal'], 2); ?>
+                                            </p>
+                                            <div class="progress" style="height: 20px; border-radius: 5px;">
+                                                <?php 
+                                                    $progress = min(100, ($cause['raised'] / $cause['goal']) * 100); 
+                                                ?>
+                                                <div class="progress-bar bg-success" 
+                                                     role="progressbar" 
+                                                     style="width: <?= $progress; ?>%;" 
+                                                     aria-valuenow="<?= $progress; ?>" 
+                                                     aria-valuemin="0" 
+                                                     aria-valuemax="100">
+                                                    <?= round($progress, 2); ?>%
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Donate Button -->
+                                        <div class="text-center mt-4">
+                                            <a href="<?= htmlspecialchars($cause['button_link']); ?>" 
+                                               class="btn btn-lg" 
+                                               style="background: maroon; color: white; border-radius: 5px; padding: 10px 20px;">
+                                                <?= htmlspecialchars($cause['button_text']); ?>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <p class="text-center text-muted">No featured cause available at the moment.</p>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        <?php else: ?>
-            <p class="text-center text-muted">No featured cause available at the moment.</p>
-        <?php endif; ?>
+            <!-- End of Featured Cause Section -->
+        </div>
     </div>
-</div><!-- .col -->
+</div>
 
 
         </div><!-- .row -->

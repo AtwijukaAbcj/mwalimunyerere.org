@@ -1613,87 +1613,60 @@ ul.tabs-nav .tab-nav.active {
 }
 
 /* Event Card Styling */
-.event-card {
-    border: none;
-    margin: 15px 0;
-    /* Add vertical margin between cards */
-    border-radius: 5px;
-    justify-content: center;
-    /* Centers horizontally */
-    align-items: center;
-    overflow: hidden;
-    background-color: #8E3951;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+.event-wrap {
+    background: #8e395154; /* White background for clean design */
+    padding: 15px; /* Consistent padding */
+    display: flex; /* Flex layout for image and content */
+    align-items: center; /* Center-align image and content */
+    border: 1px solid #DDD; /* Light border */
+    border-radius: 2px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-.card-img-top {
-    display: block;
-    /* Makes image a block element */
-    margin: auto;
-    /* Centers horizontally */
-    max-width: 100%;
-    /* Ensures the image fits within its container */
-    height: 200px;
-    /* Fixed height */
-    object-fit: cover;
-    /* Keeps aspect ratio without stretching */
-    border-radius: 5px;
+.event-wrap:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
-.event-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.event-wrap img {
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle image shadow */
 }
 
-/* Card Content */
-.card-body {
-    padding: 25px;
-}
-
-.card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #f8f9fa;
-}
-
-
-
-.btn-light {
-    color: #ffffff !important;
-    /* White text */
-    font-weight: bold;
-    background-color: transparent;
-    /* Transparent background */
-    border: 1px solid #ffffff;
-    /* White border for better visibility */
-    padding: 6px 14px;
-    /* Adjusted padding for smaller button */
-    border-radius: 5px;
-    /* Rounded corners */
-    font-size: 14px;
-    /* Consistent font size */
-    width: 120px;
-    /* Slightly increased width for balanced design */
-    height: 40px;
-    /* Adjusted height for proper fit */
+.event-content-wrap {
     display: flex;
-    /* Flexbox for alignment */
-    align-items: center;
-    /* Center content vertically */
-    justify-content: center;
-    /* Center content horizontally */
-    transition: all 0.3s ease;
-    /* Smooth hover transition */
-    text-align: center;
-    /* Ensure proper text alignment */
+    flex-direction: column; /* Stack title, date, and description */
+    justify-content: space-between; /* Space between content and button */
+    
 }
+
+.entry-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Dark text for contrast */
+}
+
+.posted-date, .cats-links {
+    font-size: 14px;
+    color: #555; /* Subtle text color */
+}
+
+.posted-date i, .cats-links i {
+    color: #8E3951; /* Maroon icons for accent */
+}
+
+.entry-footer .btn-bg {
+    border: 1px solid #8E3951; /* Maroon border */
+    background: #FFF; /* White background */
+    color: #8E3951; /* Maroon text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
+}
+
+.entry-footer .btn-bg:hover {
+    background: #8E3951; /* Maroon background */
+    color: #FFF; /* White text */
+}
+
 
 /* Hover State */
 .btn-light:hover {

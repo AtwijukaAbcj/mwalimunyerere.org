@@ -73,7 +73,7 @@ $colorIndex = 0;
     <div class="swiper-button-prev"></div>
 </div>
 
-    <div class="home-page-icon-boxes">
+<div class="home-page-icon-boxes">
     <div class="container">
         <div class="row">
             <!-- Empower Farmers -->
@@ -141,7 +141,7 @@ $colorIndex = 0;
             <div class="col-12 col-lg-6 order-2 order-lg-1">
                 <div class="welcome-content">
                     <header class="entry-header">
-                        <h2 class="entry-title">Welcome to Mwalimu Nyerere Livelihood Program</h2>
+                        <h1 class="entry-title">Welcome to Mwalimu Nyerere Livelihood Program</h1>
                     </header><!-- .entry-header -->
 
                     <div class="entry-content mt-5">
@@ -170,8 +170,8 @@ $colorIndex = 0;
 
 <!-- Projects section -->
 
-<div class="container py-5">
-    <h2 class="text-center mb-4 text-maroon">Our Projects</h2>
+<div class="container-fluid py-5">
+    <h1 class="text-center mb-4 text-maroon">Our Projects</h1>
 
     <!-- Swiper Slider -->
     <div class="swiper-container project-slider">
@@ -217,27 +217,21 @@ $colorIndex = 0;
 
 <!-- Events section -->
 <div class="home-page-events">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <!-- Upcoming Events -->
             <div class="col-12 col-lg-6">
-                <div class="card shadow-sm mb-4" style="border-radius: 5px; border: 1px solid rgba(73, 0, 87, 0.42); background:rgba(108, 5, 128, 0.13);">
+                <div class="card shadow-sm mb-4" style="border-radius: 8px; border: 1px solid #ddd;">
                     <div class="card-body">
                         <div class="upcoming-events">
                             <div class="section-heading mb-4">
                                 <h2 class="entry-title text-maroon">Upcoming Events</h2>
                             </div>
-
                             <?php if ($result_events && $result_events->num_rows > 0): ?>
                                 <?php while ($row = $result_events->fetch_assoc()): ?>
-                                    <!-- Event Card -->
                                     <div class="event-wrap d-flex align-items-center mb-4" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                                        <!-- Image Section -->
                                         <figure class="m-0" style="flex: 0 0 120px; margin-right: 20px;">
                                             <img src="<?= htmlspecialchars($row['image']); ?>" alt="<?= htmlspecialchars($row['title']); ?>" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px;">
                                         </figure>
-
-                                        <!-- Content Section -->
                                         <div class="event-content-wrap flex-grow-1">
                                             <header class="entry-header">
                                                 <h3 class="entry-title m-0"><a href="#" class="text-dark" style="text-decoration: none;"><?= htmlspecialchars($row['title']); ?></a></h3>
@@ -248,11 +242,9 @@ $colorIndex = 0;
                                                     <span><i class="fa fa-map-marker text-maroon"></i> <?= htmlspecialchars($row['location']); ?></span>
                                                 </div>
                                             </header>
-
                                             <div class="entry-content mt-2">
                                                 <p class="m-0"><?= htmlspecialchars(substr($row['description'], 0, 100)); ?>...</p>
                                             </div>
-
                                             <div class="entry-footer mt-3">
                                                 <a href="#" class="btn btn-light btn-bg" style="color: #8E3951; border-radius: 5px; padding: 10px 20px; font-size: 14px;">Read More</a>
                                             </div>
@@ -262,8 +254,6 @@ $colorIndex = 0;
                             <?php else: ?>
                                 <p>No events found.</p>
                             <?php endif; ?>
-
-                            <!-- Button to all events -->
                             <div class="text-center mt-4">
                                 <a href="events.php" class="btn btn-maroon" style="padding: 12px 24px; border-radius: 5px; font-size: 16px;">View All Events</a>
                             </div>
@@ -271,30 +261,19 @@ $colorIndex = 0;
                     </div>
                 </div>
             </div>
-            <!-- End of Upcoming Events -->
-
-            <!-- Featured Cause Section -->
             <div class="col-12 col-lg-6">
-                <div class="card shadow-sm mb-4" style="border-radius: 5px; border: 1px solid #ddd;">
+                <div class="card shadow-sm mb-4" style="border-radius: 8px; border: 1px solid #ddd;">
                     <div class="card-body">
                         <div class="featured-cause p-4">
                             <div class="section-heading mb-4">
                                 <h2 class="entry-title text-center text-maroon">Featured Cause</h2>
                             </div>
-
                             <?php if ($cause): ?>
                                 <div class="cause-wrap">
-                                    <!-- Cause Image -->
-                                    <img src="<?= htmlspecialchars($cause['image_url']); ?>" 
-                                         alt="<?= htmlspecialchars($cause['title']); ?>" 
-                                         class="img-fluid rounded mb-3" 
-                                         style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 250px;">
-
-                                    <!-- Cause Content -->
+                                    <img src="<?= htmlspecialchars($cause['image_url']); ?>" alt="<?= htmlspecialchars($cause['title']); ?>" class="img-fluid rounded mb-3" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 250px;">
                                     <div class="cause-content-wrap">
                                         <h3 class="text-center text-primary"><?= htmlspecialchars($cause['title']); ?></h3>
                                         <p class="text-muted"><?= htmlspecialchars($cause['description']); ?></p>
-
                                         <div class="fund-raised text-center">
                                             <p class="mb-2">
                                                 <strong>Raised:</strong> $<?= number_format($cause['raised'], 2); ?> 
@@ -302,27 +281,12 @@ $colorIndex = 0;
                                                 <strong>Goal:</strong> $<?= number_format($cause['goal'], 2); ?>
                                             </p>
                                             <div class="progress" style="height: 20px; border-radius: 5px;">
-                                                <?php 
-                                                    $progress = min(100, ($cause['raised'] / $cause['goal']) * 100); 
-                                                ?>
-                                                <div class="progress-bar bg-success" 
-                                                     role="progressbar" 
-                                                     style="width: <?= $progress; ?>%;" 
-                                                     aria-valuenow="<?= $progress; ?>" 
-                                                     aria-valuemin="0" 
-                                                     aria-valuemax="100">
-                                                    <?= round($progress, 2); ?>%
-                                                </div>
+                                                <?php $progress = min(100, ($cause['raised'] / $cause['goal']) * 100); ?>
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: <?= $progress; ?>%;" aria-valuenow="<?= $progress; ?>" aria-valuemin="0" aria-valuemax="100"><?= round($progress, 2); ?>%</div>
                                             </div>
                                         </div>
-
-                                        <!-- Donate Button -->
                                         <div class="text-center mt-4">
-                                            <a href="<?= htmlspecialchars($cause['button_link']); ?>" 
-                                               class="btn btn-lg" 
-                                               style="background: maroon; color: white; border-radius: 5px; padding: 10px 20px;">
-                                                <?= htmlspecialchars($cause['button_text']); ?>
-                                            </a>
+                                            <a href="<?= htmlspecialchars($cause['button_link']); ?>" class="btn btn-lg" style="background: maroon; color: white; border-radius: 5px; padding: 10px 20px;"><?= htmlspecialchars($cause['button_text']); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -333,17 +297,9 @@ $colorIndex = 0;
                     </div>
                 </div>
             </div>
-            <!-- End of Featured Cause Section -->
         </div>
     </div>
 </div>
-
-
-        </div><!-- .row -->
-    </div><!-- .container -->
-</div>
-
-</div><!-- .home-page-events -->
 
 <!-- Our cause -->
 <div class="our-causes">
@@ -525,58 +481,12 @@ $colorIndex = 0;
     </div>
 </div>
 
-<!-- Volunteer section -->
-<div class="volunteer-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Left Side: Play Button and Text -->
-            <div class="col-lg-6 position-relative">
-                <button class="play-button">
-                    <span class="play-text">Play</span>
-                </button>
-            </div>
-
-            <!-- Right Side: Donation Card -->
-            <div class="col-lg-6 position-relative">
-                <div class="donation-card">
-                    <h4>Support Us, We Need Your Help</h4>
-                    <div class="progress-circle-container">
-                        <div class="progress-circle">
-                            <svg class="circle-svg" viewBox="0 0 36 36">
-                                <path
-                                    class="circle-bg"
-                                    d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                />
-                                <path
-                                    class="circle-progress"
-                                    stroke-dasharray="70, 100"
-                                    d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                />
-                            </svg>
-                            <div class="inside-circle">70%</div>
-                        </div>
-                    </div>
-                    <h3 class="amount">$72,000</h3>
-                    <p>Donation Collected</p>
-                    <a href="#" class="donate-btn">Donate Now <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h2 class="volunteer-text">BEST VOLUNTEER</h2>
-</div>
-
-<!-- end Volunteer donation section -->
-<div class="container mt-5">
-    <div class="p-4" style="background-color: #f8f9fa; border-radius: 5px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        <div class="row align-items-end">
+<div class="container-fluid mt-0 p-0" style="background-color: #f8f9fa;">
+    <div class="p-4" style="border-radius: 0; box-shadow: none;">
+        <div class="row align-items-end g-0">
             <div class="col-12 col-lg-6">
                 <div class="section-heading">
-                    <h2 class="entry-title">Empowering communities through sustainable development and impactful initiatives </h2>
+                    <h2 class="entry-title">Empowering communities through sustainable development and impactful initiatives</h2>
                     <p class="mt-4">At Mwalimu Nyerere Livelihood Program, we focus on improving lives by providing access to clean water, education, and healthcare. Join us in making a lasting difference.</p>
                 </div>
             </div><!-- .col -->
@@ -623,7 +533,6 @@ $colorIndex = 0;
             </div><!-- .col -->
         </div><!-- .row -->
     </div><!-- Border-radius container -->
-</div><!-- .container -->
-
+</div><!-- .container-fluid -->
 
 <?php include('footer.php'); ?>

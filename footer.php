@@ -112,7 +112,10 @@
             disableOnInteraction: false,
         },
     });
+
+
 </script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const navbar = document.querySelector(".navbar");

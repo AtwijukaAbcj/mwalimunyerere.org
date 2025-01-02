@@ -2,10 +2,11 @@
 
 body {
     color: #262626;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.8;
-    font-family: 'Montserrat', sans-serif;
 }
+
 
 img {
     vertical-align: baseline;
@@ -115,7 +116,9 @@ a:active {
     color: #fff;
     text-decoration: none;
 }
-
+.img-bg{
+    background: url("images/cause-bg.jpg") no-repeat center; 
+}
 /* Donate Button on Right Side */
 .donate-btn a {
     background: #fff;
@@ -237,6 +240,19 @@ a:active {
 .page-header-section.gradient-overlay {
     background-blend-mode: overlay;
     background: #8E3951;
+}
+h1 {
+    font-size: 40px; /* Adjust the size as per your preference */
+    font-weight: bold; /* Optional, for emphasis */
+    line-height: 1.3; /* Optional, for better readability */
+}
+img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+img:hover {
+    filter: grayscale(0%);
 }
 
 /* Heading Styles */
@@ -431,6 +447,7 @@ a:active {
 .site-branding img {
     width: 90px;
     height: auto;
+    
 }
 
 
@@ -657,8 +674,12 @@ a:active {
 .navbar-brand img {
     height: 40px;
     transition: height 0.3s ease;
+    filter:none !important;
 }
 
+.foot-about .site-branding{
+    filter:none !important;
+}
 .navbar.scrolled .navbar-brand img {
     height: 35px;
 }
@@ -841,14 +862,14 @@ a:active {
 .swiper-button-next::after {
     font-size: 36px;
     /* Size for NEXT arrow */
-    color: #FFFFFF;
+    color: #ffffff00;
     /* White color for arrows */
 }
 
 .swiper-button-prev::after {
     font-size: 24px;
     /* Reduced size for PREV arrow */
-    color: #FFFFFF;
+    color: #ffffff00;
     /* White color for arrows */
 }
 
@@ -992,12 +1013,17 @@ a:active {
     }
 }
 /* Projects card index */
-
+/* Project Card Styles */
 .project-card-large {
+    position: relative;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     overflow: hidden;
+    height: 400px; /* Increased height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1007,49 +1033,59 @@ a:active {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.project-image-container {
-    position: relative;
-    overflow: hidden;
-    max-height: 300px;
-    height: 300px;
-}
-
-.project-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-image-container:hover img {
-    transform: scale(1.1);
-}
-
 .project-content {
-    background: rgba(106, 39, 58, 0.8); /* Transparent maroon */
-    padding: 20px;
+    position: absolute;
+    top: 0; /* Covers the entire card */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height */
+    background: rgba(106, 39, 58, 0.6); /* More transparent maroon overlay */
+    padding: 30px; /* Increased padding for better spacing */
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     backdrop-filter: blur(10px);
-    border-top: 3px solid #8E3951;
 }
 
 .project-title {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px; /* Increased font size */
+    margin-bottom: 15px;
     font-weight: bold;
     color: #FFD700; /* Gold accent for the title */
 }
 
 .project-description {
-    font-size: 14px;
-    margin-bottom: 10px;
-    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.8;
     color: #F5F5F5;
 }
 
+.learn-more-btn .btn {
+    background: none;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    height:50px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    
+}
+
+.learn-more-btn .btn:hover {
+    background: #FFD700;
+    color: #6A273A;
+    border-color: #FFD700;
+
+}
+
+/* Swiper Button Customization */
 .swiper-button-next, .swiper-button-prev {
     color: #6A273A;
     background-color: #FFFFFF;
@@ -1067,12 +1103,19 @@ a:active {
 .swiper-pagination-bullet {
     background: #6A273A;
     opacity: 0.7;
+    width: 16px; /* Increased size */
+    height: 16px; /* Matches width for a square shape */
+    border-radius: 1px; /* Small rounded corners for a softer square */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
     background: #8E3951;
     opacity: 1;
+    transform: scale(1.2); /* Slightly enlarges the active bullet */
 }
+
+
 
 /* end of projects card index */
 
@@ -1141,7 +1184,7 @@ a:active {
 }
 
 .elements-page .elements-heading .entry-title {
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 600;
     color: #262626;
 }
@@ -1543,6 +1586,10 @@ ul.tabs-nav .tab-nav.active {
 --------------------------------*/
 .home-page-icon-boxes {
     padding: 96px 0;
+    background-image: url('images/icon-image.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 /*
@@ -1570,7 +1617,7 @@ ul.tabs-nav .tab-nav.active {
 .welcome-content .entry-title {
     position: relative;
     padding-bottom: 24px;
-    font-size: 15px;
+    font-size: 35px;
     font-weight: 600;
     color: #fff;
 }
@@ -1996,164 +2043,141 @@ ul.tabs-nav .tab-nav.active {
 
 /*Cause new home page*/
 
-/*
-# Home Causes
---------------------------------*/
+
 .our-causes {
     position: relative;
-    padding: 96px 0;
-    background: url("images/cause-bg.jpg") no-repeat center;
-    background-size: cover;
-    z-index: 99;
-    border-radius: 5px;
-}
-
-.our-causes::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: rgba(232, 237, 238, .8);
-    border-radius: 5px;
-}
-
-/*
-# Our Causes index page
---------------------------------*/
-.our-causes {
-    position: relative;
-    padding: 96px 0;
-    background: url("images/cause-bg.jpg") no-repeat center;
+    padding: 80px 0;
+    background:#a8475949;
     background-size: cover;
     border-radius: 5px;
-    z-index: 99;
+    color: #333;
 }
 
-.our-causes::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: rgba(232, 237, 238, .8);
-    border-radius: 5px;
+.our-causes .section-heading {
+    margin-bottom: 50px;
 }
 
 .our-causes .cause-wrap {
-    margin-top: 60px;
+    background: #fff;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-causes .cause-wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .our-causes .cause-wrap figure {
     position: relative;
+    margin: 0;
+    overflow: hidden;
+    height: 200px;
 }
 
-.our-causes .cause-wrap figure .figure-overlay {
+.our-causes .cause-wrap figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.our-causes .cause-wrap figure:hover img {
+    transform: scale(1.1);
+}
+
+.our-causes .figure-overlay {
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     visibility: hidden;
-    background: rgba(0, 0, 0, 0.6);
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.our-causes .cause-wrap figure:hover .figure-overlay {
+.our-causes .figure-overlay:hover {
     opacity: 1;
     visibility: visible;
 }
 
-.our-causes .cause-content-wrap {
-    padding: 24px;
+.our-causes .figure-overlay a {
     background: #fff;
+    color: #333;
+    padding: 10px 20px;
     border-radius: 5px;
-    text-align: center;
-}
-
-.our-causes .cause-content-wrap .entry-content {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.our-causes .cause-wrap .fund-raised {
-    margin-top: 32px;
-    text-align: center;
-}
-
-.our-causes .swiper-button-next,
-.our-causes .swiper-button-prev {
-    width: 50px;
-    height: 50px;
-    margin-top: -20px;
-    border-radius: 50%;
-    /* background: linear-gradient(270deg, #8E3951 0%, #A84759 100%); */
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.our-causes .swiper-button-next {
-    right: -30px;
-}
-
-.our-causes .swiper-button-prev {
-    left: -30px;
-}
-
-.our-causes .swiper-button-next:hover,
-.our-causes .swiper-button-prev:hover {
-    transform: scale(1.1);
-    background: linear-gradient(270deg, #A84759 0%, #8E3951 100%);
-}
-
-/* Fonts and Text */
-.our-causes .entry-title {
-    font-size: 1.5rem;
-    color: #8E3951;
     font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-.our-causes .entry-title a {
+.our-causes .cause-content-wrap {
+    padding: 20px;
+    text-align: center;
+}
+
+.our-causes .cause-content-wrap .entry-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #6A273A;
+}
+
+.our-causes .cause-content-wrap .entry-title a {
     color: inherit;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.our-causes .entry-title a:hover {
+.our-causes .cause-content-wrap .entry-title a:hover {
     color: #A84759;
 }
 
-/* Fund Details */
-.our-causes .fund-raised-total,
-.our-causes .fund-raised-goal {
+.our-causes .fund-raised {
+    margin-top: 15px;
+}
+
+.our-causes .progress {
+    height: 8px;
+    border-radius: 5px;
+    background: #e9ecef;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.our-causes .progress-bar {
+    height: 100%;
+    background: #8E3951;
+}
+
+.our-causes .fund-details {
     font-size: 0.9rem;
-    color: #333;
+    color: #555;
+}
+.our-causes .swiper-button-next,
+.our-causes .swiper-button-prev {
+    width: 40px; /* Reduced width */
+    height: 40px; /* Reduced height */
+    background: #8E3951;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* Adjust font size for arrow icons */
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Swiper Disabled Buttons */
-.our-causes .swiper-button-next.swiper-button-disabled,
-.our-causes .swiper-button-prev.swiper-button-disabled {
-    opacity: 0.4;
-    pointer-events: none;
+.our-causes .swiper-button-next:hover,
+.our-causes .swiper-button-prev:hover {
+    transform: scale(1.1);
+    background: #6A273A;
 }
 
-/* Adjust Arrow Icons */
-.our-causes .swiper-button-next i,
-.our-causes .swiper-button-prev i {
-    font-size: 1.2rem;
-}
+
 
 
 @media screen and (max-width: 1400px) {

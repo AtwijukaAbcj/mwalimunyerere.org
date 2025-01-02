@@ -31,14 +31,14 @@ include('root/config.php'); // Include database connection
     <div class="row">
         <?php
         // Your original PHP code for fetching and displaying team members
-        // This block is unchanged
         $query = "SELECT * FROM people"; // Fetch all team members
         $result = $conn->query($query);
 
         if ($result && $result->num_rows > 0) {
+            $index = 1;  // Index to control pyramid structure
             while ($person = $result->fetch_assoc()) {
                 ?>
-                <div class="col-md-4 col-lg-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4 team-member">
                     <div class="card team-card">
                         <img src="<?= !empty($person['image']) ? htmlspecialchars($person['image']) : 'img/default-profile.png'; ?>" class="card-img-top" alt="<?= htmlspecialchars($person['name']); ?>">
                         <div class="card-body">
@@ -54,6 +54,7 @@ include('root/config.php'); // Include database connection
                     </div>
                 </div>
                 <?php
+                $index++;
             }
         } else {
             echo "<p class='text-center'>No team members available at the moment.</p>";

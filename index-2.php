@@ -525,6 +525,52 @@ $colorIndex = 0;
     </div>
 </div>
 
+<!-- Volunteer section -->
+<div class="volunteer-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side: Play Button and Text -->
+            <div class="col-lg-6 position-relative">
+                <button class="play-button">
+                    <span class="play-text">Play</span>
+                </button>
+            </div>
+
+            <!-- Right Side: Donation Card -->
+            <div class="col-lg-6 position-relative">
+                <div class="donation-card">
+                    <h4>Support Us, We Need Your Help</h4>
+                    <div class="progress-circle-container">
+                        <div class="progress-circle">
+                            <svg class="circle-svg" viewBox="0 0 36 36">
+                                <path
+                                    class="circle-bg"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path
+                                    class="circle-progress"
+                                    stroke-dasharray="70, 100"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                            </svg>
+                            <div class="inside-circle">70%</div>
+                        </div>
+                    </div>
+                    <h3 class="amount">$72,000</h3>
+                    <p>Donation Collected</p>
+                    <a href="#" class="donate-btn">Donate Now <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="volunteer-text">BEST VOLUNTEER</h2>
+</div>
+
+<!-- end Volunteer donation section -->
 <div class="container mt-5">
     <div class="p-4" style="background-color: #f8f9fa; border-radius: 5px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <div class="row align-items-end">

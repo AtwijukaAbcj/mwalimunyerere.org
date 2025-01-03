@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Handle image upload
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
         // Define the target directory
-        $relative_dir = "/mwalimunyerere.org/admin/assets/images/causes/";
+        $relative_dir = "/uploads/";
         $target_dir = $_SERVER['DOCUMENT_ROOT'] . $relative_dir;
 
         // Ensure the directory exists

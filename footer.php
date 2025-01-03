@@ -1,5 +1,5 @@
-        <!--Site Footer Start-->
-        <footer class="site-footer">
+   <!--Site Footer Start-->
+   <footer class="site-footer">
             <div class="site-footer__shape-1 float-bob">
                 <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
             </div>

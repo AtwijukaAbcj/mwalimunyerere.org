@@ -1,10 +1,6 @@
 <?php 
 include('header.php');
 include('root/config.php');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 
 // Check database connection
 if (!$conn) {
@@ -27,14 +23,9 @@ $sql_events = "SELECT title, description, event_date, event_time, location, imag
 $result_events = $conn->query($sql_events);
 
 // Fetch the latest featured cause
-
-// SQL to fetch the most recent cause
-$sql_cause = "SELECT title, description, image_url, raised, goal, button_text, button_link 
-              FROM causes 
-              ORDER BY created_at DESC 
-              LIMIT 1";
+$sql_cause = "SELECT title, description, image_url, raised, goal, button_text, button_link FROM causes ORDER BY created_at DESC LIMIT 3";
 $result_cause = $conn->query($sql_cause);
-$cause = $result_cause ? $result_cause->fetch_assoc() : null;
+
 // Default colors for events
 $colors = ['#8E3951', '#6A273A', '#D9B8C2', '#8C484A', '#5C1A1E'];
 $colorIndex = 0;
@@ -380,106 +371,76 @@ $colorIndex = 0;
         <!--Counter One End -->
 
         <!--Courses One Start -->
-        <section class="courses-one">
-    <div class="courses-one__shape-1 float-bob">
-        <img src="assets/images/shapes/courses-one-shape-1.png" alt="">
-    </div>
-    <div class="container">
-        <div class="courses-one__tab-box courses-one-tabs-box">
-            <div class="row">
-                <div class="col-xl-4">
-                    <div class="section-title text-right sec-title-animation animation-style2">
-                        <div class="section-title__tagline-box">
-                            <span class="section-title__tagline">Recent Causes</span>
-                            <div class="section-title__tagline-shape"></div>
-                        </div>
-                        <h2 class="section-title__title title-animation">Strengthening<br> Communities</h2>
-                    </div>
-                </div>
-                <div class="col-xl-8">
-                    <div class="p-tabs-content">
-                        <div class="p-tab active-tab" id="viewall">
-                            <div class="tabs-content__inner">
-                                <div class="courses-one__right">
-                                    <div class="row d-flex flex-wrap">
-                                        <?php
-                                        // Fetch the latest 3 causes from the database
-                                        $sql_cause = "SELECT * FROM causes ORDER BY created_at DESC LIMIT 3";
-                                        $result_cause = $conn->query($sql_cause);
 
-                                        if ($result_cause && $result_cause->num_rows > 0):
-                                            while ($cause = $result_cause->fetch_assoc()):
-                                                $image_url = htmlspecialchars($cause['image_url'] ?? 'assets/images/default-image.jpg');
-                                                $title = htmlspecialchars($cause['title'] ?? 'No Title Available');
-                                                $description = htmlspecialchars($cause['description'] ?? 'No Description Available');
-                                                $raised = number_format($cause['raised'] ?? 0, 2);
-                                                $goal = number_format($cause['goal'] ?? 0, 2);
-                                                $progress = ($cause['goal'] > 0) ? round(($cause['raised'] / $cause['goal']) * 100, 2) : 0;
-                                                $button_text = htmlspecialchars($cause['button_text'] ?? 'Learn More');
-                                                $button_link = htmlspecialchars($cause['button_link'] ?? '#');
-                                                ?>
-                                                <div class="col-lg-4 col-md-6 d-flex mb-4">
-                                                    <div class="courses-one__single flex-fill">
-                                                        <div class="courses-one__img-box">
-                                                            <div class="courses-one__img">
-                                                                <img src="<?= $image_url; ?>" alt="Image Not Found">
-                                                            </div>
-                                                            <div class="courses-one__tag">
-                                                                <span><?= $title; ?></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="courses-one__content">
-                                                            <h3 class="courses-one__title"><a href="<?= $button_link; ?>"><?= $title; ?></a></h3>
-                                                          
-                                                            <div class="courses-one__rised-and-goals">
-                                                                <div class="courses-one__raised">
-                                                                    <h4>$<?= $raised; ?><span> Raised</span></h4>
+        <section class="courses-one">
+            <div class="courses-one__shape-1 float-bob">
+                <img src="assets/images/shapes/courses-one-shape-1.png" alt="">
+            </div>
+            <div class="container-fluid"> <!-- Full width container -->
+                <div class="row">
+                    <?php if ($result_cause && $result_cause->num_rows > 0): ?>
+                        <?php while ($cause = $result_cause->fetch_assoc()): ?>
+                            <div class="col-xl-4 col-lg-4 col-md-6"> <!-- Ensures 3 columns -->
+                                <div class="courses-one__single">
+                                    <div class="courses-one__img-box">
+                                        <div class="courses-one__img">
+                                            <img src="<?= htmlspecialchars($cause['image_url']); ?>" alt="Image Not Found">
+                                            <!-- Debugging Output -->
+                                            <p>Debug: <?= htmlspecialchars($cause['image_url']); ?></p>
+                                        </div>
+                                        <div class="courses-one__tag">
+                                            <span><?= htmlspecialchars($cause['title']); ?></span>
+                                        </div>
+                                    </div>
+                                    <div class="courses-one__content">
+                                        <h3 class="courses-one__title"><a href="#"><?= htmlspecialchars($cause['title']); ?></a></h3>
+                                        <p class="courses-one__text"><?= htmlspecialchars($cause['description']); ?></p>
+                                        <div class="courses-one__rised-and-goals">
+                                            <div class="courses-one__raised">
+                                                <h4>$<?= number_format($cause['raised'], 2); ?><span>Raised</span></h4>
+                                            </div>
+                                            <div class="courses-one__goals">
+                                                <h4>$<?= number_format($cause['goal'], 2); ?><span>Goal</span></h4>
+                                            </div>
+                                        </div>
+                                        <div class="progress-levels">
+                                            <div class="progress-box">
+                                                <div class="inner count-box">
+                                                    <div class="bar">
+                                                        <div class="bar-innner">
+                                                            <div class="skill-percent">
+                                                                <span class="count-text" data-speed="3000" data-stop="<?= round(($cause['raised'] / $cause['goal']) * 100, 2); ?>">0</span>
+                                                                <span class="percent">%</span>
+                                                                <div class="progress-box__progress-shape-1">
+                                                                    <img src="assets/images/shapes/courses-one-progress-shape-1.png" alt="">
                                                                 </div>
-                                                                <div class="courses-one__goals">
-                                                                    <h4>$<?= $goal; ?><span> Goal</span></h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="progress-levels">
-                                                                <div class="progress-box">
-                                                                    <div class="inner count-box">
-                                                                        <div class="bar">
-                                                                            <div class="bar-innner">
-                                                                                <div class="skill-percent">
-                                                                                    <span class="count-text" data-speed="3000" data-stop="<?= $progress; ?>">0</span>
-                                                                                    <span class="percent">%</span>
-                                                                                    <div class="progress-box__progress-shape-1">
-                                                                                        <img src="assets/images/shapes/courses-one-progress-shape-1.png" alt="">
-                                                                                    </div>
-                                                                                    <div class="progress-box__progress-shape-2">
-                                                                                        <img src="assets/images/shapes/courses-one-progress-shape-2.png" alt="">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="bar-fill" style="width: <?= $progress; ?>%;"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="progress-box__progress-shape-2">
+                                                                    <img src="assets/images/shapes/courses-one-progress-shape-2.png" alt="">
                                                                 </div>
                                                             </div>
-                                                            <div class="courses-one__btn-box">
-                                                                <a href="<?= $button_link; ?>" class="courses-one__btn thm-btn"><span><?= $button_text; ?></span><i class="icon-arrow-up"></i></a>
-                                                            </div>
+                                                            <div class="bar-fill" data-percent="<?= round(($cause['raised'] / $cause['goal']) * 100, 2); ?>"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            <?php endwhile; ?>
-                                        <?php else: ?>
-                                            <p>No causes available at the moment.</p>
-                                        <?php endif; ?>
+                                            </div>
+                                        </div>
+                                        <div class="courses-one__btn-box">
+                                            <a href="<?= htmlspecialchars($cause['button_link']); ?>" class="courses-one__btn thm-btn">
+                                                <span><?= htmlspecialchars($cause['button_text']); ?></span><i class="icon-arrow-up"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <p>No causes available at the moment.</p>
+                    <?php endif; ?>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+
 
 
         <!--Courses One End -->

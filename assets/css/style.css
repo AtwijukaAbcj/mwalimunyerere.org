@@ -441,7 +441,7 @@ ul {
 /* Counter */
 
 .counter-one {
-  background: #0b5e01;
+  background: #007B39;
   padding: 50px 0;
   color: #fff;
   text-align: center;
@@ -1909,28 +1909,52 @@ ul {
 /*--------------------------------------------------------------
 # Edit All Css
 --------------------------------------------------------------*/
-
-.courses-one__btn span {
-  background-color: transparent;
-  border: 1px solid var(--chioary-bdr-color);
-  color: var(--chioary-black);
-  padding: 10px 20px 12px;
+/* Set the same height for all cards */
+.courses-one__carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
 }
 
-.courses-one__btn:hover span {
-  border: 1px solid var(--chioary-base);
+.courses-one__carousel .item {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row, with space between */
+  max-width: calc(33.333% - 20px); /* Ensure uniform width for cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box; /* Include padding/borders in width calculations */
 }
 
-.courses-one__btn i {
-  padding: 10px 20px 12px;
-  background-color: transparent;
-  border: 1px solid var(--chioary-bdr-color);
-  color: var(--chioary-black);
+.courses-one__single {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Force cards to be equal height */
+  background-color: #fff; /* Optional: Background color for cards */
+  border: 1px solid #ddd; /* Optional: Border for better visibility */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Card shadow */
+  padding: 20px; /* Optional: Spacing inside cards */
+  overflow: hidden; /* Prevent overflow */
 }
 
-.courses-one__btn:hover i {
-  border: 1px solid var(--chioary-base);
+.courses-one__img-box {
+  flex: 0 0 auto; /* Fix height for image box */
+  margin-bottom: 15px;
 }
+
+.courses-one__content {
+  flex: 1 0 auto; /* Allow content area to grow/shrink */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.courses-one__btn-box {
+  margin-top: auto; /* Push button area to the bottom */
+}
+
+
 
 .video-one__btn span {
   background-color: var(--chioary-white);
@@ -1978,36 +2002,37 @@ ul {
   background-color: var(--chioary-primary);
 }
 
-
-.courses-two__btn span::before {
+.cause-two__btn span::before {
   background-color: var(--chioary-primary);
 }
 
-.courses-two__btn i::after {
+.cause-two__btn i::after {
   background-color: var(--chioary-primary);
 }
 
-.courses-two__btn span {
+.cause-two__btn span {
   background-color: transparent;
   border: 1px solid var(--chioary-bdr-color);
   color: var(--chioary-black);
   padding: 10px 20px 12px;
 }
 
-.courses-two__btn:hover span {
+.cause-two__btn:hover span {
   border: 1px solid var(--chioary-primary);
 }
 
-.courses-two__btn i {
+.cause-two__btn i {
   padding: 10px 20px 12px;
   background-color: transparent;
   border: 1px solid var(--chioary-bdr-color);
   color: var(--chioary-black);
 }
 
-.courses-two__btn:hover i {
+.cause-two__btn:hover i {
   border: 1px solid var(--chioary-primary);
 }
+
+
 
 .become-volunteer-two__btn span {
   background-color: var(--chioary-base);

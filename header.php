@@ -37,8 +37,6 @@
     <link rel="stylesheet" href="assets/css/vegas.min.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
 
-    <link rel="stylesheet" href="assets/css/module-css/page-header.css" />
-
 
     <link rel="stylesheet" href="assets/css/module-css/slider.css" />
     <link rel="stylesheet" href="assets/css/module-css/footer.css" />
@@ -60,11 +58,23 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-
-
 </head>
 
-<header class="main-header">
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+
+
+
+    <div class="page-wrapper">
+        <header class="main-header">
             <div class="main-menu__top">
                 <div class="container">
                     <div class="main-menu__top-inner">
@@ -81,13 +91,13 @@
                         <div class="main-menu__wrapper-inner">
                             <div class="main-menu__left">
                                 <div class="main-menu__logo">
-                                    <a href="index.php"><img src="assets/images/resources/logo-1.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
                                 </div>
                                 <div class="main-menu__main-menu-box">
                                     <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                     <ul class="main-menu__list">
                                         <li class="dropdown megamenu">
-                                            <a href="index.php">Home </a>
+                                            <a href="index.html">Home </a>
                                             <ul>
                                                 <li>
                                                     <section class="home-showcase">
@@ -100,7 +110,7 @@
                                                                                 <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
                                                                                     alt="">
                                                                                 <div class="home-showcase__buttons">
-                                                                                    <a href="index.php"
+                                                                                    <a href="index.html"
                                                                                         class="thm-btn home-showcase__buttons__item">
                                                                                         <span>Multi Page</span>
                                                                                         <i class="icon-arrow-up"></i>
@@ -194,7 +204,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="about.php">About</a>
+                                            <a href="about.html">About</a>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Pages</a>

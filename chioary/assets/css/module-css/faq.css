@@ -1,0 +1,161 @@
+/*--------------------------------------------------------------
+# FAQ One
+--------------------------------------------------------------*/
+.faq-one {
+    position: relative;
+    display: block;
+    padding: 150px 0 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.faq-one__shape-1 {
+    position: absolute;
+    top: -33px;
+    right: 0;
+}
+
+.faq-one__shape-1 img {
+    width: auto;
+    opacity: .50;
+}
+
+.faq-one__shape-2 {
+    position: absolute;
+    bottom: 60px;
+    left: 340px;
+}
+
+.faq-one__shape-2 img {
+    width: auto;
+}
+
+.faq-one__left {
+    position: relative;
+    display: block;
+    margin-right: -30px;
+}
+
+.faq-one__left .section-title {
+    margin-bottom: 263px;
+}
+
+.faq-one__btn-box {
+    position: relative;
+    display: block;
+}
+
+.faq-one__inner {
+    position: relative;
+    display: block;
+}
+
+.faq-one__right {
+    position: relative;
+    display: block;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion {
+    position: relative;
+    display: block;
+    background-color: var(--chioary-extra);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 30px 30px 30px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    padding-right: 25px;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion-title h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: var(--chioary-black);
+    position: relative;
+    text-transform: capitalize;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion.active .accrodion-title h4 {
+    color: var(--chioary-black);
+}
+
+.faq-one__right .faq-one-accrodion .accrodion+.accrodion {
+    margin-top: 13px;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion-title h4::before {
+    content: "\f107";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--chioary-base);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    line-height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+    width: 21px;
+    height: 21px;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion.active .accrodion-title h4::before {
+    content: "\f106";
+    color: var(--chioary-black);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion-content {
+    position: relative;
+    padding-bottom: 32px;
+    margin-top: -14px;
+    padding-left: 30px;
+    padding-right: 80px;
+}
+
+.faq-one__right .faq-one-accrodion .accrodion-content p {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+/*--------------------------------------------------------------
+# FAQ Page
+--------------------------------------------------------------*/
+.faq-page {
+    padding: 150px 0 150px;
+}
+
+.faq-page .faq-one__shape-2 {
+    bottom: 200px;
+    left: 540px;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

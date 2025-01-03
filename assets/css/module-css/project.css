@@ -1,0 +1,299 @@
+/*--------------------------------------------------------------
+# Project One
+--------------------------------------------------------------*/
+.project-one {
+    position: relative;
+    display: block;
+    padding: 85px 0 0;
+    z-index: 1;
+}
+
+.project-one .section-title__tagline {
+    color: var(--chioary-white);
+}
+
+.project-one .section-title__title {
+    color: var(--chioary-white);
+}
+
+.project-one__bg-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 410px;
+    background-color: #141414;
+    z-index: -1;
+}
+
+.project-one__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .20;
+}
+
+.project-one__shape-1 {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: -1;
+}
+
+.project-one__shape-1 img {
+    width: auto;
+}
+
+.project-one__single {
+    position: relative;
+    display: block;
+}
+
+.project-one__img-box {
+    position: relative;
+    display: block;
+}
+
+.project-one__img-box::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    bottom: 24px;
+    width: 3px;
+    background-color: rgba(var(--chioary-white-rgb), .80);
+    background-position: bottom top;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: scaleY(0);
+    z-index: 1;
+}
+
+.project-one__single:hover .project-one__img-box::before {
+    transform: scaleY(1.0);
+}
+
+.project-one__img-box::after {
+    content: "";
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    height: 3px;
+    background-color: rgba(var(--chioary-white-rgb), .80);
+    background-position: left right;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: scalex(0);
+    z-index: 1;
+}
+
+.project-one__single:hover .project-one__img-box::after {
+    transform: scalex(1.0);
+}
+
+.project-one__img {
+    position: relative;
+    display: block;
+}
+
+.project-one__img::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    height: 3px;
+    background-color: rgba(var(--chioary-white-rgb), .80);
+    background-position: left center;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: scalex(0);
+    z-index: 1;
+}
+
+.project-one__single:hover .project-one__img::before {
+    transform: scalex(1.0);
+}
+
+.project-one__img::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    right: 24px;
+    width: 3px;
+    background-color: rgba(var(--chioary-white-rgb), .80);
+    background-position: bottom top;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: scalex(0);
+    z-index: 1;
+}
+
+.project-one__single:hover .project-one__img::after {
+    transform: scalex(1.0);
+}
+
+.project-one__img img {
+    width: 100%;
+}
+
+.project-one__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.project-one__arrow a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 85px;
+    font-size: 28px;
+    color: var(--chioary-white);
+    background-color: var(--chioary-base);
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.project-one__single:hover .project-one__arrow a {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition-delay: 500ms;
+    opacity: 1;
+}
+
+.project-one__arrow a:hover {
+    color: var(--chioary-base);
+    background-color: var(--chioary-white);
+}
+
+.project-one__carousel.owl-carousel .owl-stage-outer {
+    overflow: visible;
+}
+
+.project-one__carousel.owl-carousel .owl-dots {
+    position: relative;
+    text-align: center;
+    margin: 70px 0 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-one__carousel.owl-carousel .owl-dots .owl-dot+.owl-dot {
+    margin-left: 16px;
+}
+
+.project-one__carousel.owl-carousel .owl-dots .owl-dot {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 0;
+    background-color: var(--chioary-gray);
+    margin: 0px 10px;
+    padding: 0px;
+    transition: all 100ms linear;
+    transition-delay: 0.1s;
+}
+
+.project-one__carousel.owl-carousel .owl-dot.active {
+    background-color: var(--chioary-base);
+}
+
+.project-one__carousel.owl-carousel .owl-dots .owl-dot:before {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    content: "";
+    border: 1px solid var(--chioary-gray);
+    border-radius: 0;
+    transition: all 100ms linear;
+    transition-delay: 0.1s;
+}
+
+.project-one__carousel.owl-carousel .owl-dot.active:before {
+    border: 1px solid var(--chioary-base);
+}
+
+.project-one__carousel.owl-carousel .owl-dot:focus {
+    outline: none;
+}
+
+.project-one__carousel.owl-carousel .owl-dots .owl-dot span {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Project Page
+--------------------------------------------------------------*/
+.project-page {
+    padding: 185px 0 0;
+}
+
+.project-page .project-one__shape-1 {
+    top: 150px;
+}
+
+.project-page .section-title__tagline {
+    color: var(--chioary-black);
+}
+
+.project-page .section-title__title {
+    color: var(--chioary-black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

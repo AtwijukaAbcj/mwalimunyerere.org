@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+# Error Page
+--------------------------------------------------------------*/
+.error-page {
+    position: relative;
+    display: block;
+    padding: 150px 0 150px;
+    z-index: 1;
+}
+
+.error-page__shape-1 {
+    position: absolute;
+    top: 165px;
+    right: -20px;
+    z-index: -1;
+}
+
+.error-page__shape-1 img {
+    width: auto;
+    opacity: .50;
+}
+
+.error-page__shape-2 {
+    position: absolute;
+    bottom: 165px;
+    left: -10px;
+    z-index: -1;
+}
+
+.error-page__shape-2 img {
+    width: auto;
+    opacity: .50;
+}
+
+.error-page__inner {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.error-page__img {
+    position: relative;
+    display: block;
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+    animation: topBottom 3s ease-in-out infinite;
+}
+
+.error-page__img img {
+    width: 100%;
+}
+
+.error-page__title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 62px;
+    text-transform: capitalize;
+    margin-top: 100px;
+    margin-bottom: 29px;
+}
+
+.error-page__btn-box {
+    position: relative;
+    display: block;
+    margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

@@ -1,0 +1,210 @@
+/*--------------------------------------------------------------
+# video One
+--------------------------------------------------------------*/
+.video-one {
+    position: relative;
+    display: block;
+    background-color: var(--chioary-black);
+    padding: 0 0 203px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.video-one__shape-1 {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    z-index: 1;
+}
+
+.video-one__shape-1 img {
+    width: auto;
+}
+
+.video-one__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .50;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.video-one__left {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 365px;
+}
+
+.video-one__video-link {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.video-one__video-icon {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 154px;
+    height: 154px;
+    line-height: 154px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--chioary-font-two);
+    color: var(--chioary-white);
+    background-color: transparent;
+    border: 2px solid var(--chioary-white);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.video-one__video-icon:hover {
+    background-color: var(--chioary-base);
+    color: var(--chioary-black);
+    border: 2px solid var(--chioary-base);
+}
+
+.video-one__video-link .ripple,
+.video-one__video-icon .ripple:before,
+.video-one__video-icon .ripple:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-box-shadow: 0 0 0 0 rgba(var(--chioary-white-rgb), 0.6);
+    -o-box-shadow: 0 0 0 0 rgba(var(--chioary-white-rgb), 0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(var(--chioary-white-rgb), 0.6);
+    box-shadow: 0 0 0 0 rgba(var(--chioary-white-rgb), 0.6);
+    -webkit-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+}
+
+.video-one__video-icon .ripple:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+    content: "";
+    position: absolute;
+}
+
+.video-one__video-icon .ripple:after {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    content: "";
+    position: absolute;
+}
+
+.video-one__left-title {
+    font-size: 68px;
+    line-height: 68px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(var(--chioary-white-rgb), .20);
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.video-one__right {
+    position: relative;
+    display: block;
+}
+
+.video-one__need-help {
+    position: relative;
+    display: block;
+    background-color: #007B39;
+    text-align: center;
+    padding: 110px 30px 110px;
+    border-bottom-left-radius: 263px;
+    border-bottom-right-radius: 263px;
+}
+
+.video-one__need-help-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
+    color: var(--chioary-white);
+}
+
+.video-one__progress-box {
+    position: relative;
+    display: inline-block;
+    margin-top: 23px;
+    margin-bottom: 18px;
+}
+
+.video-one__progress-box canvas {
+    transform: rotate(190deg);
+}
+
+.video-one__progress-box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--chioary-white);
+    font-family: var(--chioary-font-two);
+}
+
+.video-one__need-help-dolor {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 62px;
+    color: var(--chioary-white);
+}
+
+.video-one__need-help-donate {
+    font-weight: 600;
+    font-family: var(--chioary-font-two);
+    color: var(--chioary-white);
+    margin-bottom: 60px;
+    margin-top: 15px;
+}
+
+.video-one__need-help-btn-box {
+    position: relative;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

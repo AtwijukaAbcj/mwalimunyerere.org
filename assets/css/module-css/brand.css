@@ -1,0 +1,67 @@
+/*--------------------------------------------------------------
+# Brand One
+--------------------------------------------------------------*/
+.brand-one {
+    position: relative;
+    display: block;
+    background-color: #EBD3AF;
+    padding: 70px 0 150px;
+    z-index: 1;
+}
+
+.brand-one__title-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    margin-bottom: 63px;
+}
+
+.brand-one__title-shape {
+    position: relative;
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: var(--chioary-primary);
+    border-radius: 50%;
+}
+
+.brand-one__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.brand-one__carousel {
+    position: relative;
+    display: block;
+}
+
+.brand-one__single {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.brand-one__img {
+    position: relative;
+    display: block;
+}
+
+.brand-one__img>img {
+    width: auto !important;
+    transition: all 500ms linear;
+    transition-delay: 0.1s;
+    transform: scale(1);
+}
+
+.brand-one__single:hover .brand-one__img>img {
+    transform: scale(.9);
+}
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

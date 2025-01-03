@@ -26,13 +26,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Handle image upload
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+        // Define the target directory
+        $relative_dir = "/mwalimunyerere.org/admin/assets/images/causes/";
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . $relative_dir;
+
+        // Ensure the directory exists
+        if (!is_dir($target_dir)) {
+            mkdir($target_dir, 0777, true);
+        }
+
         $image_name = uniqid() . "_" . basename($_FILES['image']['name']);
-        $target_dir = "uploads/";
         $target_file = $target_dir . $image_name;
+
+        // Construct the full URL
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+        $host = $_SERVER['HTTP_HOST'];
+        $image_url = $protocol . "://" . $host . $relative_dir . $image_name;
 
         // Move uploaded file
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
-            $image_url = $target_file; // Set the image URL for database
+            // File uploaded successfully
         } else {
             $image_url = ""; // If upload fails, set to an empty string
             echo "<div class='alert alert-danger'>Image upload failed!</div>";

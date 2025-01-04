@@ -58,6 +58,9 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 </head>
 
 <body class="custom-cursor">
@@ -69,16 +72,12 @@
         <div class="preloader__image"></div>
     </div>
     <!-- /.preloader -->
-
-
-
-
     <div class="page-wrapper">
         <header class="main-header">
             <div class="main-menu__top">
                 <div class="container">
                     <div class="main-menu__top-inner">
-                        <p class="main-menu__top-text">Welcome to Chioary, a crowdfunding & Charity agency</p>
+                        <p class="main-menu__top-text">Mail:info@mwalimunyerere.org Contact: +25412323232</p>
                         <div class="main-menu__top-btn">
                             <a href="#"> <span class="icon-right-arrow1"></span> Signup Now</a>
                         </div>
@@ -91,7 +90,7 @@
                         <div class="main-menu__wrapper-inner">
                             <div class="main-menu__left">
                                 <div class="main-menu__logo">
-                                    <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
+                                    <a href="index.php"><img src="assets/images/resources/logo-1.png" alt=""></a>
                                 </div>
                                 <div class="main-menu__main-menu-box">
                                     <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
@@ -229,10 +228,10 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#">Blog</a>
+                                            <a href="#">Events</a>
                                             <ul class="shadow-box">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                                <li><a href="events.php">All Events</a></li>
+                                                <li><a href="#">Other Events</a></li>
                                             </ul>
                                         </li>
                                         <li>

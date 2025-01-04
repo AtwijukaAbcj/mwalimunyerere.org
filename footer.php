@@ -197,6 +197,55 @@
 
 
 
+<!-- template js -->
+<script src="assets/js/script.js"></script>
+<script>
+// Main Slider Initialization
+document.addEventListener("DOMContentLoaded", function () {
+    const mainSliderCarousel = $("#mainSliderCarousel");
+    if (mainSliderCarousel.length && !mainSliderCarousel.hasClass("initialized")) {
+        mainSliderCarousel.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: ["<i class='icon-arrow-left'></i>", "<i class='icon-arrow-right'></i>"],
+            items: 1,
+            autoplay: true,
+            autoplayTimeout: 5000,
+        });
+        mainSliderCarousel.addClass("initialized");
+    }
+});
 
-    <!-- template js -->
-    <script src="assets/js/script.js"></script>
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            items: 2,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 2 }
+            }
+        });
+
+        // Navigation Button Events
+        $(".owl-prev").click(function () {
+            $(".owl-carousel").trigger("prev.owl.carousel");
+        });
+        $(".owl-next").click(function () {
+            $(".owl-carousel").trigger("next.owl.carousel");
+        });
+    });
+</script>
+
+<!-- Include Owl Carousel CSS & JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

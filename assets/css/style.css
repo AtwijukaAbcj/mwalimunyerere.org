@@ -399,44 +399,7 @@ ul {
 
 /* Proloader Css */
 
-.preloader {
-  position: fixed;
-  background-color: #fff;
-  background-position: center center;
-  background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 99999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-}
 
-.preloader__image {
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: flipInY;
-  animation-name: flipInY;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  background-image: url(../images/loader.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60px auto;
-  width: 100%;
-  height: 100%;
-}
 
 /* Counter */
 
@@ -1905,11 +1868,80 @@ ul {
   color: var(--chioary-white);
 }
 
+.main-menu__logo {
+  display: block;
+  padding: 14.5px 0;
+}
+
+.main-menu__logo img {
+  height: 80px; /* Adjust the height as needed */
+  max-width: 100%; /* Ensure the image scales proportionally */
+  object-fit: contain; /* Keeps the image within bounds */
+}
+.service_container{
+  padding-top: 5px;
+}
+
+
+.main-slider__bg {
+  height: 400px; /* Set a fixed height */
+}
+
+@media (min-width: 768px) {
+  .main-slider__bg {
+      height: 600px; /* Adjust height for larger screens */
+  }
+}
+.main-slider__bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%; /* Ensure it spans the full container height */
+  width: 100%; /* Ensure it spans the full container width */
+}
+
+.main-slider__map {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
 
 /*--------------------------------------------------------------
 # Edit All Css
 --------------------------------------------------------------*/
-/* Set the same height for all cards */
+.equal-height-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure it stretches to the parent height */
+  min-height: 400px; /* Minimum height for all cards */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional styling */
+  border-radius: 8px; /* Optional styling */
+}
+.courses-one__single {
+  min-height: 400px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.courses-one__content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+
+/* Progress bar width fix */
+.bar-fill {
+  height: 5px; /* Adjust the height as necessary */
+  background-color: #28a745; /* Progress bar color */
+}
+
 .courses-one__carousel {
   display: flex;
   flex-wrap: wrap;
@@ -1938,9 +1970,12 @@ ul {
   overflow: hidden; /* Prevent overflow */
 }
 
+/* Ensure the image box maintains its aspect ratio */
 .courses-one__img-box {
-  flex: 0 0 auto; /* Fix height for image box */
-  margin-bottom: 15px;
+  flex-shrink: 0;
+  max-height: 200px; /* Adjust as necessary */
+  overflow: hidden;
+  border-bottom: 1px solid #ddd; /* Optional divider */
 }
 
 .courses-one__content {
@@ -1953,6 +1988,9 @@ ul {
 .courses-one__btn-box {
   margin-top: auto; /* Push button area to the bottom */
 }
+
+
+
 
 
 

@@ -29,12 +29,12 @@ $result_events = $conn->query($sql_events);
 // Fetch the latest featured cause
 
 // SQL to fetch the most recent cause
-$sql_cause = "SELECT title, description, image_url, raised, goal, button_text, button_link 
-              FROM causes 
-              ORDER BY created_at DESC 
-              LIMIT 1";
-$result_cause = $conn->query($sql_cause);
-$cause = $result_cause ? $result_cause->fetch_assoc() : null;
+// $sql_cause = "SELECT title, description, image_url, raised, goal, button_text, button_link 
+//               FROM causes 
+//               ORDER BY created_at DESC 
+//               LIMIT 1";
+// $result_cause = $conn->query($sql_cause);
+// $cause = $result_cause ? $result_cause->fetch_assoc() : null;
 // Default colors for events
 $colors = ['#8E3951', '#6A273A', '#D9B8C2', '#8C484A', '#5C1A1E'];
 $colorIndex = 0;
@@ -45,33 +45,25 @@ $colorIndex = 0;
 <body class="custom-cursor">
 
         <!-- Main Slider Start -->
+
         <section class="main-slider">
             <?php if ($result_banners && $result_banners->num_rows > 0): ?>
-                <div class="main-slider__carousel owl-carousel owl-theme">
+                <div class="main-slider__carousel owl-carousel owl-theme" id="mainSliderCarousel">
                     <?php while ($banner = $result_banners->fetch_assoc()): ?>
                         <div class="item">
-                            <div class="main-slider__bg" style="background-image: url(<?= htmlspecialchars($banner['image_url']); ?>);"></div>
-                            <div class="main-slider__map" style="background-image: url(<?= isset($banner['map_url']) ? htmlspecialchars($banner['map_url']) : 'default-map.png'; ?>);"></div>
+                            <div class="main-slider__bg" 
+                                style="background-image: url('<?= htmlspecialchars($banner['image_url']); ?>');"></div>
+                            <div class="main-slider__map" 
+                                style="background-image: url('default-map.png');"></div>
                             <div class="container">
                                 <div class="main-slider__content">
-                                    <div class="main-slider__sub-title-box">
-                                        <div class="main-slider__sub-title-shape"></div>
-                                        <h5 class="main-slider__sub-title">
-                                            <?= isset($banner['subtitle']) ? htmlspecialchars($banner['subtitle']) : 'Default Subtitle'; ?>
-                                        </h5>
-                                    </div>
-                                    <h2 class="main-slider__title">
-                                        <?= htmlspecialchars($banner['title']); ?>
-                                    </h2>
-                                    <p class="main-slider__text">
-                                        <?= isset($banner['description']) ? htmlspecialchars($banner['description']) : 'Default Description'; ?>
-                                    </p>
-                                    <div class="main-slider__btn-box">
-                                        <a href="<?= htmlspecialchars($banner['button_link']); ?>" class="main-slider__btn thm-btn">
-                                            <span><?= htmlspecialchars($banner['button_text']); ?></span>
-                                            <i class="icon-arrow-up"></i>
-                                        </a>
-                                    </div>
+                                    <h5 class="main-slider__sub-title"><?= htmlspecialchars($banner['subtitle']); ?></h5>
+                                    <h2 class="main-slider__title"><?= htmlspecialchars($banner['title']); ?></h2>
+                                    <p class="main-slider__text"><?= !empty($banner['description']) ? htmlspecialchars($banner['description']) : ''; ?></p>
+                                    <a href="<?= htmlspecialchars($banner['button_link']); ?>" class="main-slider__btn thm-btn">
+                                        <span><?= htmlspecialchars($banner['button_text']); ?></span>
+                                        <i class="icon-arrow-up"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +90,7 @@ $colorIndex = 0;
             <div class="services-one__shape-3 float-bob-y">
                 <img src="assets/images/shapes/services-one-shape-3.png" alt="">
             </div>
-            <div class="container">
+            <div class="container service_container">
                 <div class="section-title text-center sec-title-animation animation-style1">
                     <div class="section-title__tagline-box">
                         <div class="section-title__tagline-shape"></div>
@@ -135,105 +127,105 @@ $colorIndex = 0;
                 </div>
                 <!--Services One Single End-->
     
-    <!--Services One Single Start-->
-    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-        <div class="services-one__single">
-            <div class="services-one__img-box">
-                <div class="services-one__img">
-                    <img src="assets/images/services/services-1-2.png" alt="">
-                </div>
-                <div class="services-one__content">
-                    <div class="services-one__content-inner">
-                        <div class="services-one__icon">
-                            <span class="icon-take-away"></span>
+        <!--Services One Single Start-->
+            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                <div class="services-one__single">
+                    <div class="services-one__img-box">
+                        <div class="services-one__img">
+                            <img src="assets/images/services/services-1-2.png" alt="">
                         </div>
-                        <h3 class="services-one__title">
-                            <a href="service-details.html">Empowerment and Capacity Building</a>
-                        </h3>
-                        <p class="services-one__text">
-                            Offering capacity building, training, and extension services to empower farmers and marginalized groups.
-                        </p>
-                        <div class="services-one__arrow">
-                            <a href="service-details.html"><span class="icon-arrow-up"></span></a>
+                        <div class="services-one__content">
+                            <div class="services-one__content-inner">
+                                <div class="services-one__icon">
+                                    <span class="icon-take-away"></span>
+                                </div>
+                                <h3 class="services-one__title">
+                                    <a href="service-details.html">Empowerment and Capacity Building</a>
+                                </h3>
+                                <p class="services-one__text">
+                                    Offering capacity building, training, and extension services to empower farmers and marginalized groups.
+                                </p>
+                                <div class="services-one__arrow">
+                                    <a href="service-details.html"><span class="icon-arrow-up"></span></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!--Services One Single End-->
-    
-    <!--Services One Single Start-->
-    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
-        <div class="services-one__single">
-            <div class="services-one__img-box">
+            <!--Services One Single End-->
+            
+            <!--Services One Single Start-->
+            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
+                <div class="services-one__single">
+                <div class="services-one__img-box">
                 <div class="services-one__img">
                     <img src="assets/images/services/services-1-3.jpg" alt="">
                 </div>
                 <div class="services-one__content">
-                    <div class="services-one__content-inner">
-                        <div class="services-one__icon">
-                            <span class="icon-take-away"></span>
-                        </div>
-                        <h3 class="services-one__title">
-                            <a href="service-details.html">Innovation and Sustainability</a>
-                        </h3>
-                        <p class="services-one__text">
-                            Promoting climate-smart practices, clean animal products, and IT-driven solutions for record-keeping and market linkages.
-                        </p>
-                        <div class="services-one__arrow">
-                            <a href="service-details.html"><span class="icon-arrow-up"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Services One Single End-->
-</div>
-
-                <div class="services-one__video">
-                    <div class="services-one__video-img">
-                        <img src="assets/images/services/services-one-video-img.png" alt="">
-                        <div class="services-one__video-link">
-                            <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                <div class="services-one__video-icon">
-                                    <span>Play</span>
-                                    <i class="ripple"></i>
+                            <div class="services-one__content-inner">
+                                <div class="services-one__icon">
+                                    <span class="icon-take-away"></span>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="services-one__audio-box">
-                        <div class="services-one__audio-content">
-                            <audio>
-                                <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <div class="player">
-                                <div class="playpause">
-                                    <i class="play fa fa-play-circle" aria-hidden="true"></i>
-                                    <i class="pause fa fa-pause-circle" aria-hidden="true"></i>
-                                </div>
-                                <div class="scrubber">
-                                    <div class="bar">
-                                        <div class="position-marker"></div>
-                                    </div>
-                                </div>
-                                <div class="elapsed">
-                                    <span>00:00</span>
+                                <h3 class="services-one__title">
+                                    <a href="service-details.html">Innovation and Sustainability</a>
+                                </h3>
+                                <p class="services-one__text">
+                                    Promoting climate-smart practices, clean animal products, and IT-driven solutions for record-keeping and market linkages.
+                                </p>
+                                <div class="services-one__arrow">
+                                    <a href="service-details.html"><span class="icon-arrow-up"></span></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="services-one__audio-title-box">
-                            <h4>Holistic Solutions</h4>
-                            <p>
-                                Providing access to nutritious animal products, IT-based solutions, and innovative tools for farmers' empowerment.
-                            </p>
-                        </div>
                     </div>
                 </div>
-            </div>
+                </div>
+                <!--Services One Single End-->
+                </div>
+
+                <div class="services-one__video">
+                        <div class="services-one__video-img">
+                            <img src="assets/images/services/services-one-video-img.png" alt="">
+                            <div class="services-one__video-link">
+                                <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                                    <div class="services-one__video-icon">
+                                        <span>Play</span>
+                                        <i class="ripple"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="services-one__audio-box">
+                            <div class="services-one__audio-content">
+                                <audio>
+                                    <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <div class="player">
+                                    <div class="playpause">
+                                        <i class="play fa fa-play-circle" aria-hidden="true"></i>
+                                        <i class="pause fa fa-pause-circle" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="scrubber">
+                                        <div class="bar">
+                                            <div class="position-marker"></div>
+                                        </div>
+                                    </div>
+                                    <div class="elapsed">
+                                        <span>00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-one__audio-title-box">
+                                <h4>Holistic Solutions</h4>
+                                <p>
+                                    Providing access to nutritious animal products, IT-based solutions, and innovative tools for farmers' empowerment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+             </div>
         </section>
 
 
@@ -258,7 +250,7 @@ $colorIndex = 0;
                             <p class="about-one__text">Despite the growing demand for livestock products, farmers have not been able to bridge the gap through supply. Challenges such as low-yielding breeds, poor management practices, diseases, and seasonal fluctuations in forage and feed persist. Our organization aims to empower farmers by providing capacity building, training, extension services, consultation, and community mobilization.</p>
                             <div class="about-one__img-box">
                                 <div class="about-one__img">
-                                    <img src="assets/images/resources/aboutone-img-1.jpg" alt="">
+                                    <img src="assets/images/resources/aboutone-img-1.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -294,7 +286,7 @@ $colorIndex = 0;
                                     <div class="about-one__round-text-box">
                                         <div class="about-one__round-text-box-inner rotate-me">
                                             <div class="about-one__curved-circle">
-                                                - years of experience - years of experience
+                                                <!-- - years of experience - years of experience -->
                                             </div>
                                         </div>
                                         <div class="about-one__count count-box">
@@ -380,106 +372,108 @@ $colorIndex = 0;
         <!--Counter One End -->
 
         <!--Courses One Start -->
-        <section class="courses-one">
-    <div class="courses-one__shape-1 float-bob">
-        <img src="assets/images/shapes/courses-one-shape-1.png" alt="">
-    </div>
-    <div class="container">
-        <div class="courses-one__tab-box courses-one-tabs-box">
-            <div class="row">
-                <div class="col-xl-4">
-                    <div class="section-title text-right sec-title-animation animation-style2">
-                        <div class="section-title__tagline-box">
-                            <span class="section-title__tagline">Recent Causes</span>
-                            <div class="section-title__tagline-shape"></div>
-                        </div>
-                        <h2 class="section-title__title title-animation">Strengthening<br> Communities</h2>
-                    </div>
-                </div>
-                <div class="col-xl-8">
-                    <div class="p-tabs-content">
-                        <div class="p-tab active-tab" id="viewall">
-                            <div class="tabs-content__inner">
-                                <div class="courses-one__right">
-                                    <div class="row d-flex flex-wrap">
-                                        <?php
-                                        // Fetch the latest 3 causes from the database
-                                        $sql_cause = "SELECT * FROM causes ORDER BY created_at DESC LIMIT 3";
-                                        $result_cause = $conn->query($sql_cause);
 
-                                        if ($result_cause && $result_cause->num_rows > 0):
-                                            while ($cause = $result_cause->fetch_assoc()):
-                                                $image_url = htmlspecialchars($cause['image_url'] ?? 'assets/images/default-image.jpg');
-                                                $title = htmlspecialchars($cause['title'] ?? 'No Title Available');
-                                                $description = htmlspecialchars($cause['description'] ?? 'No Description Available');
-                                                $raised = number_format($cause['raised'] ?? 0, 2);
-                                                $goal = number_format($cause['goal'] ?? 0, 2);
-                                                $progress = ($cause['goal'] > 0) ? round(($cause['raised'] / $cause['goal']) * 100, 2) : 0;
-                                                $button_text = htmlspecialchars($cause['button_text'] ?? 'Learn More');
-                                                $button_link = htmlspecialchars($cause['button_link'] ?? '#');
-                                                ?>
-                                                <div class="col-lg-4 col-md-6 d-flex mb-4">
-                                                    <div class="courses-one__single flex-fill">
-                                                        <div class="courses-one__img-box">
-                                                            <div class="courses-one__img">
-                                                                <img src="<?= $image_url; ?>" alt="Image Not Found">
-                                                            </div>
-                                                            <div class="courses-one__tag">
-                                                                <span><?= $title; ?></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="courses-one__content">
-                                                            <h3 class="courses-one__title"><a href="<?= $button_link; ?>"><?= $title; ?></a></h3>
-                                                          
-                                                            <div class="courses-one__rised-and-goals">
-                                                                <div class="courses-one__raised">
-                                                                    <h4>$<?= $raised; ?><span> Raised</span></h4>
+        <section class="courses-one">
+            <div class="courses-one__shape-1 float-bob">
+                <img src="assets/images/shapes/courses-one-shape-1.png" alt="">
+            </div>
+            <div class="container">
+                <div class="courses-one__tab-box courses-one-tabs-box">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="section-title text-right sec-title-animation animation-style2">
+                                <div class="section-title__tagline-box">
+                                    <span class="section-title__tagline">Recent Causes</span>
+                                    <div class="section-title__tagline-shape"></div>
+                                </div>
+                                <h2 class="section-title__title title-animation">Strengthening<br> Communities</h2>
+                                <!-- Navigation Buttons -->
+                                <div class="navigation-buttons mt-3">
+                                    <button class="btn btn-light owl-prev" type="button"><i class="icon-arrow-left"></i> Prev</button>
+                                    <button class="btn btn-light owl-next" type="button">Next <i class="icon-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="p-tabs-content">
+                                <!-- Tab -->
+                                <div class="p-tab active-tab" id="viewall">
+                                    <div class="tabs-content__inner">
+                                        <div class="owl-carousel owl-theme">
+                                            <?php
+                                            $sql_cause = "SELECT * FROM causes ORDER BY created_at DESC LIMIT 3";
+                                            $result_cause = $conn->query($sql_cause);
+
+                                            if ($result_cause && $result_cause->num_rows > 0):
+                                                while ($cause = $result_cause->fetch_assoc()):
+                                                    $image_url = htmlspecialchars($cause['image_url'] ?? 'assets/images/default-image.jpg');
+                                                    $title = htmlspecialchars($cause['title'] ?? 'No Title Available');
+                                                    $description = htmlspecialchars($cause['description'] ?? 'No Description Available');
+                                                    $raised = number_format($cause['raised'] ?? 0, 2);
+                                                    $goal = number_format($cause['goal'] ?? 0, 2);
+                                                    $progress = ($cause['goal'] > 0) ? round(($cause['raised'] / $cause['goal']) * 100, 2) : 0;
+                                                    $button_text = htmlspecialchars($cause['button_text'] ?? 'Learn More');
+                                                    $button_link = htmlspecialchars($cause['button_link'] ?? '#');
+                                                    ?>
+                                                    <div class="item">
+                                                        <div class="courses-one__single d-flex flex-column equal-height-card">
+                                                            <div class="courses-one__img-box">
+                                                                <div class="courses-one__img">
+                                                                    <img src="<?= $image_url; ?>" alt="Image Not Found">
                                                                 </div>
-                                                                <div class="courses-one__goals">
-                                                                    <h4>$<?= $goal; ?><span> Goal</span></h4>
+                                                                <div class="courses-one__tag">
+                                                                    <span><a href="<?= $button_link; ?>"><?= $title; ?></a></span>
                                                                 </div>
                                                             </div>
-                                                            <div class="progress-levels">
-                                                                <div class="progress-box">
-                                                                    <div class="inner count-box">
-                                                                        <div class="bar">
-                                                                            <div class="bar-innner">
-                                                                                <div class="skill-percent">
-                                                                                    <span class="count-text" data-speed="3000" data-stop="<?= $progress; ?>">0</span>
-                                                                                    <span class="percent">%</span>
-                                                                                    <div class="progress-box__progress-shape-1">
-                                                                                        <img src="assets/images/shapes/courses-one-progress-shape-1.png" alt="">
-                                                                                    </div>
-                                                                                    <div class="progress-box__progress-shape-2">
-                                                                                        <img src="assets/images/shapes/courses-one-progress-shape-2.png" alt="">
+                                                            <div class="courses-one__content flex-fill d-flex flex-column justify-content-between">
+                                                                <p class="courses-one__text"><?= $description; ?></p>
+                                                                <div>
+                                                                    <div class="courses-one__rised-and-goals">
+                                                                        <div class="courses-one__raised">
+                                                                            <h4>$<?= $raised; ?><span> Raised</span></h4>
+                                                                        </div>
+                                                                        <div class="courses-one__goals">
+                                                                            <h4>$<?= $goal; ?><span> Goal</span></h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress-levels">
+                                                                        <div class="progress-box">
+                                                                            <div class="inner count-box">
+                                                                                <div class="bar">
+                                                                                    <div class="bar-innner">
+                                                                                        <div class="skill-percent">
+                                                                                            <span class="count-text" data-speed="3000" data-stop="<?= $progress; ?>">0</span>
+                                                                                            <span class="percent">%</span>
+                                                                                        </div>
+                                                                                        <div class="bar-fill" style="width: <?= $progress; ?>%;"></div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="bar-fill" style="width: <?= $progress; ?>%;"></div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="courses-one__btn-box">
-                                                                <a href="<?= $button_link; ?>" class="courses-one__btn thm-btn"><span><?= $button_text; ?></span><i class="icon-arrow-up"></i></a>
+                                                                <div class="courses-one__btn-box">
+                                                                    <a href="<?= $button_link; ?>" class="courses-one__btn thm-btn"><span><?= $button_text; ?></span><i class="icon-arrow-up"></i></a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            <?php endwhile; ?>
-                                        <?php else: ?>
-                                            <p>No causes available at the moment.</p>
-                                        <?php endif; ?>
+                                                <?php endwhile; ?>
+                                            <?php else: ?>
+                                                <p>No causes available at the moment.</p>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 </div>
+                                <!-- End Tab -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+
 
 
         <!--Courses One End -->
@@ -499,121 +493,64 @@ $colorIndex = 0;
                         <br> Events.</h2>
                 </div>
                 <div class="row">
-                    <!--Event One Single Start-->
-                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".1s">
-                        <div class="event-one__single">
-                            <div class="event-one__img-box">
-                                <div class="event-one__img">
-                                    <img src="assets/images/event/event-1-1.jpg" alt="">
-                                </div>
-                                <div class="event-one__date">
-                                    <div class="event-one__date-shape-1">
-                                        <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
+                    <?php
+                    // Fetch the latest 4 events from the database
+                    $sql_events = "SELECT id, title, event_date, event_time, location, image FROM events ORDER BY event_date ASC LIMIT 4";
+                    $result_events = $conn->query($sql_events);
+
+                    if ($result_events && $result_events->num_rows > 0):
+                        while ($event = $result_events->fetch_assoc()):
+                            $event_id = $event['id'];
+                            $title = htmlspecialchars($event['title']);
+                            $event_date = date('d F', strtotime($event['event_date']));
+                            $event_time = date('h:i A', strtotime($event['event_time']));
+                            $location = htmlspecialchars($event['location']);
+                            $image = htmlspecialchars($event['image']);
+                            ?>
+                            <!--Event One Single Start-->
+                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".1s">
+                                <div class="event-one__single">
+                                    <div class="event-one__img-box">
+                                        <div class="event-one__img">
+                                            <img src="<?= $image; ?>" alt="<?= $title; ?>">
+                                        </div>
+                                        <div class="event-one__date">
+                                            <div class="event-one__date-shape-1">
+                                                <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
+                                            </div>
+                                            <p><?= $event_date; ?></p>
+                                        </div>
                                     </div>
-                                    <p>10 August</p>
-                                </div>
-                            </div>
-                            <div class="event-one__content">
-                                <h3 class="event-one__title"><a href="events.html">Environmental Clean <br>Up Day</a>
-                                </h3>
-                                <p class="event-one__text">By Brooklyn Simmons<span>09:05AM - 01:05 AM</span></p>
-                                <div class="event-one__btn-box">
-                                    <a href="events.html" class="event-one__btn"><i
-                                            class="icon-right-arrow"></i><span>Read
-                                            More</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Event One Single End-->
-                    <!--Event One Single Start-->
-                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="event-one__single">
-                            <div class="event-one__img-box">
-                                <div class="event-one__img">
-                                    <img src="assets/images/event/event-1-2.jpg" alt="">
-                                </div>
-                                <div class="event-one__date">
-                                    <div class="event-one__date-shape-1">
-                                        <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
+                                    <div class="event-one__content">
+                                        <h3 class="event-one__title">
+                                            <a href="event-details.php?id=<?= $event_id; ?>"><?= $title; ?></a>
+                                        </h3>
+                                        <p class="event-one__text"><?= $location; ?><span><?= $event_time; ?></span></p>
+                                        <div class="event-one__btn-box">
+                                            <a href="event-details.php?id=<?= $event_id; ?>" class="event-one__btn">
+                                                <i class="icon-right-arrow"></i>
+                                                <span>Read More</span>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <p>23 April</p>
                                 </div>
                             </div>
-                            <div class="event-one__content">
-                                <h3 class="event-one__title"><a href="events.html">Environmental Clean <br>Up Day</a>
-                                </h3>
-                                <p class="event-one__text">By Brooklyn Simmons<span>09:05AM - 01:05 AM</span></p>
-                                <div class="event-one__btn-box">
-                                    <a href="events.html" class="event-one__btn"><i
-                                            class="icon-right-arrow"></i><span>Read
-                                            More</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Event One Single End-->
-                    <!--Event One Single Start-->
-                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="event-one__single">
-                            <div class="event-one__img-box">
-                                <div class="event-one__img">
-                                    <img src="assets/images/event/event-1-3.jpg" alt="">
-                                </div>
-                                <div class="event-one__date">
-                                    <div class="event-one__date-shape-1">
-                                        <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
-                                    </div>
-                                    <p>03 June</p>
-                                </div>
-                            </div>
-                            <div class="event-one__content">
-                                <h3 class="event-one__title"><a href="events.html">Environmental Clean <br>Up Day</a>
-                                </h3>
-                                <p class="event-one__text">By Brooklyn Simmons<span>09:05AM - 01:05 AM</span></p>
-                                <div class="event-one__btn-box">
-                                    <a href="events.html" class="event-one__btn"><i
-                                            class="icon-right-arrow"></i><span>Read
-                                            More</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Event One Single End-->
-                    <!--Event One Single Start-->
-                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="event-one__single">
-                            <div class="event-one__img-box">
-                                <div class="event-one__img">
-                                    <img src="assets/images/event/event-1-4.jpg" alt="">
-                                </div>
-                                <div class="event-one__date">
-                                    <div class="event-one__date-shape-1">
-                                        <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
-                                    </div>
-                                    <p>10 March</p>
-                                </div>
-                            </div>
-                            <div class="event-one__content">
-                                <h3 class="event-one__title"><a href="events.html">Environmental Clean <br>Up Day</a>
-                                </h3>
-                                <p class="event-one__text">By Brooklyn Simmons<span>09:05AM - 01:05 AM</span></p>
-                                <div class="event-one__btn-box">
-                                    <a href="events.html" class="event-one__btn"><i
-                                            class="icon-right-arrow"></i><span>Read
-                                            More</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Event One Single End-->
+                            <!--Event One Single End-->
+                        <?php
+                        endwhile;
+                    else:
+                        ?>
+                        <p>No events available</p>
+                    <?php endif; ?>
                 </div>
                 <div class="event-one__btn-2">
-                    <a href="events.html" class="event-one__btn-2 thm-btn"><span>See All</span><i
-                            class="icon-arrow-up"></i></a>
+                    <a href="events.php" class="event-one__btn-2 thm-btn">
+                        <span>See All</span><i class="icon-arrow-up"></i>
+                    </a>
                 </div>
             </div>
         </section>
+
         <!--Event One End -->
 
         <!--Video One Start -->
@@ -621,7 +558,7 @@ $colorIndex = 0;
             <div class="video-one__shape-1 float-bob-x">
                 <img src="assets/images/shapes/video-one-shape-1.png" alt="">
             </div>
-            <div class="video-one__bg" style="background-image: url(assets/images/backgrounds/video-one-bg.jpg);"></div>
+            <div class="video-one__bg" style="background-image: url(assets/images/backgrounds/video-one-bg.png);"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-lg-7 wow fadeInUp" data-wow-delay=".3s">

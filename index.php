@@ -484,73 +484,6 @@ $colorIndex = 0;
         <!--Courses One End -->
 
         <!--Event One Start -->
-        <section class="event-one">
-    <div class="event-one__shape-1 float-bob img-rounded">
-        <img src="assets/images/shapes/event-one-shape-1.png" alt="">
-    </div>
-    <div class="container">
-        <div class="section-title text-center sec-title-animation animation-style1">
-            <div class="section-title__tagline-box">
-                <div class="section-title__tagline-shape"></div>
-                <span class="section-title__tagline">Our Events</span>
-            </div>
-            <h2 class="section-title__title title-animation">Events Schedule Upcoming<br> Events.</h2>
-        </div>
-        <div class="row">
-            <?php
-            $sql_events = "SELECT id, title, event_date, event_time, location, image FROM events ORDER BY event_date ASC LIMIT 4";
-            $result_events = $conn->query($sql_events);
-
-            if ($result_events && $result_events->num_rows > 0):
-                while ($event = $result_events->fetch_assoc()):
-                    $event_id = $event['id'];
-                    $title = htmlspecialchars($event['title']);
-                    $event_date = date('d F', strtotime($event['event_date']));
-                    $event_time = date('h:i A', strtotime($event['event_time']));
-                    $location = htmlspecialchars($event['location']);
-                    $image = htmlspecialchars($event['image']) ?: 'assets/images/default-event.jpg';
-                    ?>
-                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".1s">
-                        <div class="event-one__single">
-                            <div class="event-one__img-box">
-                                <div class="event-one__img img-rounded">
-                                    <img src="<?= $image; ?>" alt="<?= $title; ?>">
-                                </div>
-                                <div class="event-one__date">
-                                    <div class="event-one__date-shape-1 img-rounded">
-                                        <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
-                                    </div>
-                                    <p><?= $event_date; ?></p>
-                                </div>
-                            </div>
-                            <div class="event-one__content">
-                                <h3 class="event-one__title">
-                                    <a href="event-details.php?id=<?= $event_id; ?>"><?= $title; ?></a>
-                                </h3>
-                                <p class="event-one__text"><?= $location; ?><span><?= $event_time; ?></span></p>
-                                <div class="event-one__btn-box">
-                                    <a href="event-details.php?id=<?= $event_id; ?>" class="event-one__btn">
-                                        <i class="icon-right-arrow"></i>
-                                        <span>Read More</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                endwhile;
-            else:
-                ?>
-                <p>No events available</p>
-            <?php endif; ?>
-        </div>
-        <div class="event-one__btn-2">
-            <a href="events.php" class="event-one__btn-2 thm-btn">
-                <span>See All</span><i class="icon-arrow-up"></i>
-            </a>
-        </div>
-    </div>
-</section>
 
 
         <!--Event One End -->
@@ -610,28 +543,34 @@ $colorIndex = 0;
                 <div class="become-volunteer__single">
                     <div class="become-volunteer__single-bg"
                         style="background-image: url(assets/images/backgrounds/become-volunteer-single-bg.png);"></div>
-                    <h3 class="become-volunteer__title"><a href="contact.html">Join Us Volunteer</a></h3>
-                    <p class="become-volunteer__text">Becoming a volunteer with MNLP means joining a dedicated
-                        team
-                        <br> committed to making a difference. We welcome individuals from
-                        <br> all walks of life who are passionate</p>
-                    <div class="become-volunteer__btn-box">
-                        <a href="contact.html" class="become-volunteer__btn thm-btn"><span>See More</span><i
-                                class="icon-arrow-up"></i></a>
+                    <div class="become-volunteer__text_div">
+                        <h3 class="become-volunteer__title"><a href="contact.php">Join Us Volunteer</a></h3>
+                        <p class="become-volunteer__text">Becoming a volunteer with MNLP means joining a dedicated
+                            team
+                            <br> committed to making a difference. We welcome individuals from
+                            <br> all walks of life who are passionate</p>
+                        
+                        <div class="become-volunteer__btn-box">
+                            <a href="contact.html" class="become-volunteer__btn thm-btn"><span>See More</span><i
+                                    class="icon-arrow-up"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="become-volunteer__single">
                     <div class="become-volunteer__single-bg-2"
                         style="background-image: url(assets/images/backgrounds/become-volunteer-single-bg-2.png);">
                     </div>
-                    <h3 class="become-volunteer__title"><a href="team.html">Become Volunteer</a></h3>
-                    <p class="become-volunteer__text">Becoming a volunteer with MNLP means joining a dedicated
-                        team
+                    <div class="become-volunteer__text_div">
+                        <h3 class="become-volunteer__title"><a href="contact.php">Join Us Volunteer</a></h3>
+                        <p class="become-volunteer__text">Becoming a volunteer with MNLP means joining a dedicated
+                            team
                         <br> committed to making a difference. We welcome individuals from
                         <br> all walks of life who are passionate</p>
-                    <div class="become-volunteer__btn-box">
-                        <a href="team.html" class="become-volunteer__btn-2 thm-btn"><span>See More</span><i
-                                class="icon-arrow-up"></i></a>
+                    
+                       
+                        <div class="become-volunteer__btn-box">
+                            <a href="team.html" class="become-volunteer__btn-2 thm-btn"><span>See More</span><i class="icon-arrow-up"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -786,98 +725,7 @@ $colorIndex = 0;
             </section>
         <!--Team One End -->
 
-        <!--Testimonial One Start -->
-        <section class="testimonial-one">
-            <div class="testimonial-one__bg" data-jarallax data-speed="0.3" data-imgPosition="100% 100%"
-                style="background-image: url(assets/images/backgrounds/testimonial-one-bg.png);"></div>
-            <div class="testimonial-one__quote">
-                <img src="assets/images/icon/quote.png" alt="">
-            </div>
-            <div class="container">
-                <div class="section-title text-center sec-title-animation animation-style1">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-shape"></div>
-                        <span class="section-title__tagline">Our Testimonial</span>
-                    </div>
-                    <h2 class="section-title__title title-animation">Our Impact in Their Words</h2>
-                </div>
-                <div class="testimonial-one__carousel owl-theme owl-carousel">
-                    <!--Testimonial One Single Start-->
-                    <div class="item">
-                        <div class="testimonial-one__single">
-                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with MNLPand I’m continually inspired by the
-                                <br> dedication and passion of the team.</p>
-                            <div class="testimonial-one__client-info">
-                                <div class="testimonial-one__client-img">
-                                    <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
-                                </div>
-                                <div class="testimonial-one__client-content">
-                                    <h3>Ronald Richards</h3>
-                                    <p>General manager</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Testimonial One Single End-->
-                    <!--Testimonial One Single Start-->
-                    <div class="item">
-                        <div class="testimonial-one__single">
-                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with MNLPand I’m continually inspired by the
-                                <br> dedication and passion of the team.</p>
-                            <div class="testimonial-one__client-info">
-                                <div class="testimonial-one__client-img">
-                                    <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
-                                </div>
-                                <div class="testimonial-one__client-content">
-                                    <h3>Courtney Henry</h3>
-                                    <p>General manager</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Testimonial One Single End-->
-                    <!--Testimonial One Single Start-->
-                    <div class="item">
-                        <div class="testimonial-one__single">
-                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with MNLPand I’m continually inspired by the
-                                <br> dedication and passion of the team.</p>
-                            <div class="testimonial-one__client-info">
-                                <div class="testimonial-one__client-img">
-                                    <img src="assets/images/testimonial/testimonial-1-3.jpg" alt="">
-                                </div>
-                                <div class="testimonial-one__client-content">
-                                    <h3>Adam Smith</h3>
-                                    <p>General manager</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Testimonial One Single End-->
-                    <!--Testimonial One Single Start-->
-                    <div class="item">
-                        <div class="testimonial-one__single">
-                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with MNLPand I’m continually inspired by the
-                                <br> dedication and passion of the team.</p>
-                            <div class="testimonial-one__client-info">
-                                <div class="testimonial-one__client-img">
-                                    <img src="assets/images/testimonial/testimonial-1-4.jpg" alt="">
-                                </div>
-                                <div class="testimonial-one__client-content">
-                                    <h3>Robert Ken</h3>
-                                    <p>General manager</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Testimonial One Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Testimonial One End -->
+
 
         <!--FAQ One Start -->
         <section class="faq-one">
@@ -1044,7 +892,98 @@ $colorIndex = 0;
                 </div>
             </div>
         </section>
-
+        <!--Testimonial One Start -->
+        <section class="testimonial-one">
+            <div class="testimonial-one__bg" data-jarallax data-speed="0.3" data-imgPosition="100% 100%"
+                style="background-image: url(assets/images/backgrounds/testimonial-one-bg.png);"></div>
+            <div class="testimonial-one__quote">
+                <img src="assets/images/icon/quote.png" alt="">
+            </div>
+            <div class="container">
+                <div class="section-title text-center sec-title-animation animation-style1">
+                    <div class="section-title__tagline-box">
+                        <div class="section-title__tagline-shape"></div>
+                        <span class="section-title__tagline">Our Testimonial</span>
+                    </div>
+                    <h2 class="section-title__title title-animation">Our Impact in Their Words</h2>
+                </div>
+                <div class="testimonial-one__carousel owl-theme owl-carousel">
+                    <!--Testimonial One Single Start-->
+                    <div class="item">
+                        <div class="testimonial-one__single">
+                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
+                                <br> with MNLPand I’m continually inspired by the
+                                <br> dedication and passion of the team.</p>
+                            <div class="testimonial-one__client-info">
+                                <div class="testimonial-one__client-img">
+                                    <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
+                                </div>
+                                <div class="testimonial-one__client-content">
+                                    <h3>Ronald Richards</h3>
+                                    <p>General manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Testimonial One Single End-->
+                    <!--Testimonial One Single Start-->
+                    <div class="item">
+                        <div class="testimonial-one__single">
+                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
+                                <br> with MNLPand I’m continually inspired by the
+                                <br> dedication and passion of the team.</p>
+                            <div class="testimonial-one__client-info">
+                                <div class="testimonial-one__client-img">
+                                    <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
+                                </div>
+                                <div class="testimonial-one__client-content">
+                                    <h3>Courtney Henry</h3>
+                                    <p>General manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Testimonial One Single End-->
+                    <!--Testimonial One Single Start-->
+                    <div class="item">
+                        <div class="testimonial-one__single">
+                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
+                                <br> with MNLPand I’m continually inspired by the
+                                <br> dedication and passion of the team.</p>
+                            <div class="testimonial-one__client-info">
+                                <div class="testimonial-one__client-img">
+                                    <img src="assets/images/testimonial/testimonial-1-3.jpg" alt="">
+                                </div>
+                                <div class="testimonial-one__client-content">
+                                    <h3>Adam Smith</h3>
+                                    <p>General manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Testimonial One Single End-->
+                    <!--Testimonial One Single Start-->
+                    <div class="item">
+                        <div class="testimonial-one__single">
+                            <p class="testimonial-one__text">I’ve had the privilege of volunteering
+                                <br> with MNLPand I’m continually inspired by the
+                                <br> dedication and passion of the team.</p>
+                            <div class="testimonial-one__client-info">
+                                <div class="testimonial-one__client-img">
+                                    <img src="assets/images/testimonial/testimonial-1-4.jpg" alt="">
+                                </div>
+                                <div class="testimonial-one__client-content">
+                                    <h3>Robert Ken</h3>
+                                    <p>General manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Testimonial One Single End-->
+                </div>
+            </div>
+        </section>
+        <!--Testimonial One End -->
         <!--Blog One End -->
 
         <!--Newsletter One Start -->

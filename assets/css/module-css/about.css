@@ -28,6 +28,7 @@
     position: relative;
     display: block;
     margin-right: 36px;
+    border-radius: 5px;
 }
 
 .about-one__img-box {
@@ -77,6 +78,7 @@
     position: relative;
     display: block;
     margin-top: 9px;
+    border-radius: 5px;
 }
 
 .about-one__single {
@@ -86,6 +88,8 @@
     text-align: center;
     padding: 24px 20px 24px;
     margin-bottom: 26px;
+    border-radius: 5px;
+    box-shadow: 10px;
 }
 
 .about-one__icon {

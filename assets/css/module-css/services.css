@@ -285,6 +285,7 @@
     background-color: var(--chioary-base);
     padding: 38px 30px 29px;
     z-index: 2;
+    border-radius: 5px;
 }
 
 .services-one__audio-content {

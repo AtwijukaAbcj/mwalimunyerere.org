@@ -7,18 +7,23 @@
     padding: 150px 0 0;
     overflow: hidden;
     z-index: 1;
+
 }
 
+
+/* background-color: red; */
 .faq-one__shape-1 {
     position: absolute;
     top: -33px;
     right: 0;
+
 }
 
 .faq-one__shape-1 img {
     width: auto;
     opacity: .50;
 }
+
 
 .faq-one__shape-2 {
     position: absolute;
@@ -48,11 +53,14 @@
 .faq-one__inner {
     position: relative;
     display: block;
+
+
 }
 
 .faq-one__right {
     position: relative;
     display: block;
+
 }
 
 .faq-one__right .faq-one-accrodion .accrodion {
@@ -61,6 +69,8 @@
     background-color: var(--chioary-extra);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
+    border-radius: 5px;
+    background-color: #28a74628;
 }
 
 .faq-one__right .faq-one-accrodion .accrodion-title {

@@ -137,44 +137,44 @@
                         <p class="main-menu__top-text">Mail:info@mwalimunyerere.org Contact: +25412323232</p>
                         <div class="main-menu__top-btn">
                             <a href="#"> <span class="icon-right-arrow1"></span>Donate Now</a>
-</div>
-                    </div>
-                </div>
-            </div>
-            <nav class="main-menu">
-    <div class="main-menu__wrapper">
-        <div class="container">
-            <div class="main-menu__wrapper-inner">
-                <div class="main-menu__left">
-                    <div class="main-menu__logo">
-                        <a href="index.php"><img src="assets/images/resources/logo-1.png" alt="Logo"></a>
-                    </div>
-                </div>
-                <div class="main-menu__main-menu-box">
-                    <ul class="main-menu__list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li class="dropdown">
-                            <a href="#">Projects</a>
-                            <ul class="shadow-box">
-                                <li><a href="project.php">All Projects</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="team.php">Our Team</a></li>
-                        <li><a href="events.php">Events</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <div class="main-menu__right">
-                            <a href="#" class="main-menu__search icon-search"></a>
-                            <a href="#" class="main-menu__user icon-people"></a>
                         </div>
-                    </ul>
+                    </div>
                 </div>
-
             </div>
-        </div>
-    </div>
-</nav>
+                <nav class="main-menu">
+                    <div class="main-menu__wrapper">
+                        <div class="container">
+                            <div class="main-menu__wrapper-inner">
+                                <div class="main-menu__left">
+                                    <div class="main-menu__logo">
+                                        <a href="index.php"><img src="assets/images/resources/logo-1.png" alt="Logo"></a>
+                                    </div>
+                                </div>
+                                <div class="main-menu__main-menu-box">
+                                    <ul class="main-menu__list">
+                                        <li><a href="index.php">Home</a></li>
+                                        <li><a href="about.php">About</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">Projects</a>
+                                            <ul class="shadow-box">
+                                                <li><a href="project.php">All Projects</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="team.php">Our Team</a></li>
+                                        <li><a href="events.php">Events</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <div class="main-menu__right">
+                                            <a href="#" class="main-menu__search icon-search"></a>
+                                            <a href="#" class="main-menu__user icon-people"></a>
+                                        </div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
 
         </header>
 

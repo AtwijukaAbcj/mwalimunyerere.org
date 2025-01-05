@@ -582,15 +582,33 @@ ul {
   left: 0;
   right: 0;
   width: 100%;
-  background: transparent;
-  transition: all 500ms ease;
+  background: transparent; /* Transparent background initially */
+  transition: all 500ms ease; /* Smooth transition */
   z-index: 999;
+}
+
+.main-header.sticky {
+  position: fixed; /* Fixes the menu on top */
+  top: 0;
+  background: #ffffff11; /* Optional: Add background color when sticky */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  animation: slide-down 0.3s ease-in-out; /* Smooth slide-in effect */
 }
 
 .main-menu__top {
   position: relative;
   display: block;
 }
+
+@keyframes slide-down {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
 
 .main-menu__top-inner {
   position: relative;

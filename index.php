@@ -10,6 +10,9 @@ error_reporting(E_ALL);
 if (!$conn) {
     die("Database connection failed: " . mysqli_connect_error());
 }
+// Fetch blogs from the database
+$query = "SELECT * FROM blogs ORDER BY created_date DESC LIMIT 3"; // Adjust limit if needed
+$result = $conn->query($query);
 
 // Fetch banners from the database
 $sql_banners = "SELECT * FROM banners ORDER BY created_at DESC";
@@ -80,59 +83,59 @@ $colorIndex = 0;
         <!--Main Slider Start -->
 
         <!--Services One Start -->
-        <section class="services-one">
-            <div class="services-one__shape-1 float-bob-y">
-                <img src="assets/images/shapes/services-one-shape-1.png" alt="">
+<section class="services-one">
+    <div class="services-one__shape-1 float-bob-y">
+        <img src="assets/images/shapes/services-one-shape-1.png" alt="" class="img-rounded">
+    </div>
+    <div class="services-one__shape-2 float-bob-x">
+        <img src="assets/images/shapes/services-one-shape-2.png" alt="" class="img-rounded">
+    </div>
+    <div class="services-one__shape-3 float-bob-y">
+        <img src="assets/images/shapes/services-one-shape-3.png" alt="" class="img-rounded">
+    </div>
+    <div class="container service_container">
+        <div class="section-title text-center sec-title-animation animation-style1">
+            <div class="section-title__tagline-box">
+                <div class="section-title__tagline-shape"></div>
+                <span class="section-title__tagline">Our Services</span>
             </div>
-            <div class="services-one__shape-2 float-bob-x">
-                <img src="assets/images/shapes/services-one-shape-2.png" alt="">
-            </div>
-            <div class="services-one__shape-3 float-bob-y">
-                <img src="assets/images/shapes/services-one-shape-3.png" alt="">
-            </div>
-            <div class="container service_container">
-                <div class="section-title text-center sec-title-animation animation-style1">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-shape"></div>
-                        <span class="section-title__tagline">Our Services</span>
-                    </div>
-                    <h2 class="section-title__title title-animation">Empowering Communities Through <br> Compassionate Action</h2>
-                </div>
-                <div class="row">
-                <!--Services One Single Start-->
-                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="services-one__single">
-                        <div class="services-one__img-box">
-                            <div class="services-one__img">
-                                <img src="assets/images/services/services-1-1.png" alt="">
-                            </div>
-                            <div class="services-one__content">
-                                <div class="services-one__content-inner">
-                                    <div class="services-one__icon">
-                                        <span class="icon-take-away"></span>
-                                    </div>
-                                    <h3 class="services-one__title">
-                                        <a href="service-details.html">Addressing Agricultural Challenges</a>
-                                    </h3>
-                                    <p class="services-one__text">
-                                        Providing solutions to key agricultural challenges like low-yielding breeds, diseases, and poor management practices.
-                                    </p>
-                                    <div class="services-one__arrow">
-                                        <a href="service-details.html"><span class="icon-arrow-up"></span></a>
-                                    </div>
+            <h2 class="section-title__title title-animation">Empowering Communities Through <br> Compassionate Action</h2>
+        </div>
+        <div class="row">
+            <!-- Services One Single Start -->
+            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <div class="services-one__single">
+                    <div class="services-one__img-box">
+                        <div class="services-one__img">
+                            <img src="assets/images/services/services-1-1.png" alt="" class="img-rounded">
+                        </div>
+                        <div class="services-one__content">
+                            <div class="services-one__content-inner">
+                                <div class="services-one__icon">
+                                    <span class="icon-take-away"></span>
+                                </div>
+                                <h3 class="services-one__title">
+                                    <a href="service-details.html">Addressing Agricultural Challenges</a>
+                                </h3>
+                                <p class="services-one__text">
+                                    Providing solutions to key agricultural challenges like low-yielding breeds, diseases, and poor management practices.
+                                </p>
+                                <div class="services-one__arrow">
+                                    <a href="service-details.html"><span class="icon-arrow-up"></span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--Services One Single End-->
-    
-        <!--Services One Single Start-->
+            </div>
+            <!-- Services One Single End -->
+
+            <!-- Services One Single Start -->
             <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
                 <div class="services-one__single">
                     <div class="services-one__img-box">
                         <div class="services-one__img">
-                            <img src="assets/images/services/services-1-2.png" alt="">
+                            <img src="assets/images/services/services-1-2.png" alt="" class="img-rounded">
                         </div>
                         <div class="services-one__content">
                             <div class="services-one__content-inner">
@@ -153,16 +156,16 @@ $colorIndex = 0;
                     </div>
                 </div>
             </div>
-            <!--Services One Single End-->
-            
-            <!--Services One Single Start-->
+            <!-- Services One Single End -->
+
+            <!-- Services One Single Start -->
             <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
                 <div class="services-one__single">
-                <div class="services-one__img-box">
-                <div class="services-one__img">
-                    <img src="assets/images/services/services-1-3.jpg" alt="">
-                </div>
-                <div class="services-one__content">
+                    <div class="services-one__img-box">
+                        <div class="services-one__img">
+                            <img src="assets/images/services/services-1-3.jpg" alt="" class="img-rounded">
+                        </div>
+                        <div class="services-one__content">
                             <div class="services-one__content-inner">
                                 <div class="services-one__icon">
                                     <span class="icon-take-away"></span>
@@ -180,53 +183,55 @@ $colorIndex = 0;
                         </div>
                     </div>
                 </div>
-                </div>
-                <!--Services One Single End-->
-                </div>
+            </div>
+            <!-- Services One Single End -->
+        </div>
 
-                <div class="services-one__video">
-                        <div class="services-one__video-img">
-                            <img src="assets/images/services/services-one-video-img.png" alt="">
-                            <div class="services-one__video-link">
-                                <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                    <div class="services-one__video-icon">
-                                        <span>Play</span>
-                                        <i class="ripple"></i>
-                                    </div>
-                                </a>
+        <!-- Video Section -->
+        <div class="services-one__video">
+            <div class="services-one__video-img">
+                <img src="assets/images/services/services-one-video-img.png" alt="" class="img-rounded">
+                <div class="services-one__video-link">
+                    <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                        <div class="services-one__video-icon">
+                            <span>Play</span>
+                            <i class="ripple"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="services-one__audio-box">
+                <div class="services-one__audio-content">
+                    <audio>
+                        <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="player">
+                        <div class="playpause">
+                            <i class="play fa fa-play-circle" aria-hidden="true"></i>
+                            <i class="pause fa fa-pause-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="scrubber">
+                            <div class="bar">
+                                <div class="position-marker"></div>
                             </div>
                         </div>
-                        <div class="services-one__audio-box">
-                            <div class="services-one__audio-content">
-                                <audio>
-                                    <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                                <div class="player">
-                                    <div class="playpause">
-                                        <i class="play fa fa-play-circle" aria-hidden="true"></i>
-                                        <i class="pause fa fa-pause-circle" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="scrubber">
-                                        <div class="bar">
-                                            <div class="position-marker"></div>
-                                        </div>
-                                    </div>
-                                    <div class="elapsed">
-                                        <span>00:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="services-one__audio-title-box">
-                                <h4>Holistic Solutions</h4>
-                                <p>
-                                    Providing access to nutritious animal products, IT-based solutions, and innovative tools for farmers' empowerment.
-                                </p>
-                            </div>
+                        <div class="elapsed">
+                            <span>00:00</span>
                         </div>
                     </div>
-             </div>
-        </section>
+                </div>
+                <div class="services-one__audio-title-box">
+                    <h4>Holistic Solutions</h4>
+                    <p>
+                        Providing access to nutritious animal products, IT-based solutions, and innovative tools for farmers' empowerment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
         <!--Services One End -->
@@ -249,7 +254,7 @@ $colorIndex = 0;
                         <div class="about-one__left">
                             <p class="about-one__text">Despite the growing demand for livestock products, farmers have not been able to bridge the gap through supply. Challenges such as low-yielding breeds, poor management practices, diseases, and seasonal fluctuations in forage and feed persist. Our organization aims to empower farmers by providing capacity building, training, extension services, consultation, and community mobilization.</p>
                             <div class="about-one__img-box">
-                                <div class="about-one__img">
+                                <div class="about-one__img img-rounded">
                                     <img src="assets/images/resources/aboutone-img-1.png" alt="">
                                 </div>
                             </div>
@@ -311,7 +316,7 @@ $colorIndex = 0;
                                         </div>
                                         <div class="about-one__client-content">
                                             <p>Dedicated to Empowerment</p>
-                                            <div class="about-one__sign">
+                                            <div class="about-one__sign img-rounded">
                                                 <img src="assets/images/resources/about-one-client-sign.png" alt="">
                                             </div>
                                         </div>
@@ -374,7 +379,7 @@ $colorIndex = 0;
         <!--Courses One Start -->
 
         <section class="courses-one">
-            <div class="courses-one__shape-1 float-bob">
+            <div class="courses-one__shape-1 float-bob img-rounded">
                 <img src="assets/images/shapes/courses-one-shape-1.png" alt="">
             </div>
             <div class="container">
@@ -480,76 +485,73 @@ $colorIndex = 0;
 
         <!--Event One Start -->
         <section class="event-one">
-            <div class="event-one__shape-1 float-bob">
-                <img src="assets/images/shapes/event-one-shape-1.png" alt="">
+    <div class="event-one__shape-1 float-bob img-rounded">
+        <img src="assets/images/shapes/event-one-shape-1.png" alt="">
+    </div>
+    <div class="container">
+        <div class="section-title text-center sec-title-animation animation-style1">
+            <div class="section-title__tagline-box">
+                <div class="section-title__tagline-shape"></div>
+                <span class="section-title__tagline">Our Events</span>
             </div>
-            <div class="container">
-                <div class="section-title text-center sec-title-animation animation-style1">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-shape"></div>
-                        <span class="section-title__tagline">Our Events</span>
-                    </div>
-                    <h2 class="section-title__title title-animation">Events Schedule Upcoming
-                        <br> Events.</h2>
-                </div>
-                <div class="row">
-                    <?php
-                    // Fetch the latest 4 events from the database
-                    $sql_events = "SELECT id, title, event_date, event_time, location, image FROM events ORDER BY event_date ASC LIMIT 4";
-                    $result_events = $conn->query($sql_events);
+            <h2 class="section-title__title title-animation">Events Schedule Upcoming<br> Events.</h2>
+        </div>
+        <div class="row">
+            <?php
+            $sql_events = "SELECT id, title, event_date, event_time, location, image FROM events ORDER BY event_date ASC LIMIT 4";
+            $result_events = $conn->query($sql_events);
 
-                    if ($result_events && $result_events->num_rows > 0):
-                        while ($event = $result_events->fetch_assoc()):
-                            $event_id = $event['id'];
-                            $title = htmlspecialchars($event['title']);
-                            $event_date = date('d F', strtotime($event['event_date']));
-                            $event_time = date('h:i A', strtotime($event['event_time']));
-                            $location = htmlspecialchars($event['location']);
-                            $image = htmlspecialchars($event['image']);
-                            ?>
-                            <!--Event One Single Start-->
-                            <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".1s">
-                                <div class="event-one__single">
-                                    <div class="event-one__img-box">
-                                        <div class="event-one__img">
-                                            <img src="<?= $image; ?>" alt="<?= $title; ?>">
-                                        </div>
-                                        <div class="event-one__date">
-                                            <div class="event-one__date-shape-1">
-                                                <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
-                                            </div>
-                                            <p><?= $event_date; ?></p>
-                                        </div>
+            if ($result_events && $result_events->num_rows > 0):
+                while ($event = $result_events->fetch_assoc()):
+                    $event_id = $event['id'];
+                    $title = htmlspecialchars($event['title']);
+                    $event_date = date('d F', strtotime($event['event_date']));
+                    $event_time = date('h:i A', strtotime($event['event_time']));
+                    $location = htmlspecialchars($event['location']);
+                    $image = htmlspecialchars($event['image']) ?: 'assets/images/default-event.jpg';
+                    ?>
+                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".1s">
+                        <div class="event-one__single">
+                            <div class="event-one__img-box">
+                                <div class="event-one__img img-rounded">
+                                    <img src="<?= $image; ?>" alt="<?= $title; ?>">
+                                </div>
+                                <div class="event-one__date">
+                                    <div class="event-one__date-shape-1 img-rounded">
+                                        <img src="assets/images/shapes/event-one-date-shape-1.png" alt="">
                                     </div>
-                                    <div class="event-one__content">
-                                        <h3 class="event-one__title">
-                                            <a href="event-details.php?id=<?= $event_id; ?>"><?= $title; ?></a>
-                                        </h3>
-                                        <p class="event-one__text"><?= $location; ?><span><?= $event_time; ?></span></p>
-                                        <div class="event-one__btn-box">
-                                            <a href="event-details.php?id=<?= $event_id; ?>" class="event-one__btn">
-                                                <i class="icon-right-arrow"></i>
-                                                <span>Read More</span>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <p><?= $event_date; ?></p>
                                 </div>
                             </div>
-                            <!--Event One Single End-->
-                        <?php
-                        endwhile;
-                    else:
-                        ?>
-                        <p>No events available</p>
-                    <?php endif; ?>
-                </div>
-                <div class="event-one__btn-2">
-                    <a href="events.php" class="event-one__btn-2 thm-btn">
-                        <span>See All</span><i class="icon-arrow-up"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+                            <div class="event-one__content">
+                                <h3 class="event-one__title">
+                                    <a href="event-details.php?id=<?= $event_id; ?>"><?= $title; ?></a>
+                                </h3>
+                                <p class="event-one__text"><?= $location; ?><span><?= $event_time; ?></span></p>
+                                <div class="event-one__btn-box">
+                                    <a href="event-details.php?id=<?= $event_id; ?>" class="event-one__btn">
+                                        <i class="icon-right-arrow"></i>
+                                        <span>Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                endwhile;
+            else:
+                ?>
+                <p>No events available</p>
+            <?php endif; ?>
+        </div>
+        <div class="event-one__btn-2">
+            <a href="events.php" class="event-one__btn-2 thm-btn">
+                <span>See All</span><i class="icon-arrow-up"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 
         <!--Event One End -->
 
@@ -607,9 +609,9 @@ $colorIndex = 0;
                 </div>
                 <div class="become-volunteer__single">
                     <div class="become-volunteer__single-bg"
-                        style="background-image: url(assets/images/backgrounds/become-volunteer-single-bg.jpg);"></div>
+                        style="background-image: url(assets/images/backgrounds/become-volunteer-single-bg.png);"></div>
                     <h3 class="become-volunteer__title"><a href="contact.html">Join Us Volunteer</a></h3>
-                    <p class="become-volunteer__text">Becoming a volunteer with Chioary means joining a dedicated
+                    <p class="become-volunteer__text">Becoming a volunteer with MNLP means joining a dedicated
                         team
                         <br> committed to making a difference. We welcome individuals from
                         <br> all walks of life who are passionate</p>
@@ -620,10 +622,10 @@ $colorIndex = 0;
                 </div>
                 <div class="become-volunteer__single">
                     <div class="become-volunteer__single-bg-2"
-                        style="background-image: url(assets/images/backgrounds/become-volunteer-single-bg-2.jpg);">
+                        style="background-image: url(assets/images/backgrounds/become-volunteer-single-bg-2.png);">
                     </div>
                     <h3 class="become-volunteer__title"><a href="team.html">Become Volunteer</a></h3>
-                    <p class="become-volunteer__text">Becoming a volunteer with Chioary means joining a dedicated
+                    <p class="become-volunteer__text">Becoming a volunteer with MNLP means joining a dedicated
                         team
                         <br> committed to making a difference. We welcome individuals from
                         <br> all walks of life who are passionate</p>
@@ -637,157 +639,157 @@ $colorIndex = 0;
         <!--Become Volunteer End -->
 
         <!--Team One Start -->
-        <section class="team-one">
-            <div class="team-one__shape-1 float-bob">
-                <img src="assets/images/shapes/team-one-shape-1.png" alt="">
-            </div>
-            <div class="container">
-                <div class="section-title text-center sec-title-animation animation-style1">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-shape"></div>
-                        <span class="section-title__tagline">Our Team Member</span>
+                        <!-- <section class="team-one">
+                            <div class="team-one__shape-1 float-bob">
+                                <img src="assets/images/shapes/team-one-shape-1.png" alt="">
+                            </div>
+                            <div class="container">
+                                <div class="section-title text-center sec-title-animation animation-style1">
+                                    <div class="section-title__tagline-box">
+                                        <div class="section-title__tagline-shape"></div>
+                                        <span class="section-title__tagline">Our Team Member</span>
+                                    </div>
+                                    <h2 class="section-title__title title-animation">Events Schedule Upcoming
+                                        <br> Events.</h2>
+                                </div>
+                                <div class="row"> -->
+                        <!--Team One Single Start-->
+                                    <!-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                                        <div class="team-one__single">
+                                            <div class="team-one__img-box">
+                                                <div class="team-one__img">
+                                                    <img src="assets/images/team/team-1-1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="team-one__content">
+                                                <div class="team-one__social-list">
+                                                    <div class="team-one__social-plus-minus">
+                                                        <p>
+                                                            <span class="icon-plus team-one__plus"></span>
+                                                            <span class="icon-minus team-one__minus"></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="team-one__social">
+                                                        <a href="#"><span class="icon-facebook"></span></a>
+                                                        <a href="#"><span class="icon-twitter"></span></a>
+                                                        <a href="#"><span class="icon-instagram"></span></a>
+                                                        <a href="#"><span class="icon-youtube"></span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="team-one__title-box">
+                                                    <h3><a href="team.html">Leslie Alexander</a></h3>
+                                                    <p>Junior Poster</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                        <!--Team One Single End-->
+                        <!--Team One Single Start-->
+                                <!-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="team-one__single">
+                                        <div class="team-one__img-box">
+                                            <div class="team-one__img">
+                                                <img src="assets/images/team/team-1-2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="team-one__content">
+                                            <div class="team-one__social-list">
+                                                <div class="team-one__social-plus-minus">
+                                                    <p>
+                                                        <span class="icon-plus team-one__plus"></span>
+                                                        <span class="icon-minus team-one__minus"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="team-one__social">
+                                                    <a href="#"><span class="icon-facebook"></span></a>
+                                                    <a href="#"><span class="icon-twitter"></span></a>
+                                                    <a href="#"><span class="icon-instagram"></span></a>
+                                                    <a href="#"><span class="icon-youtube"></span></a>
+                                                </div>
+                                            </div>
+                                            <div class="team-one__title-box">
+                                                <h3><a href="team.html">Annette Black</a></h3>
+                                                <p>Senior Poster</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                        <!--Team One Single End-->
+                        <!--Team One Single Start-->
+                                <!-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="team-one__single">
+                                        <div class="team-one__img-box">
+                                            <div class="team-one__img">
+                                                <img src="assets/images/team/team-1-3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="team-one__content">
+                                            <div class="team-one__social-list">
+                                                <div class="team-one__social-plus-minus">
+                                                    <p>
+                                                        <span class="icon-plus team-one__plus"></span>
+                                                        <span class="icon-minus team-one__minus"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="team-one__social">
+                                                    <a href="#"><span class="icon-facebook"></span></a>
+                                                    <a href="#"><span class="icon-twitter"></span></a>
+                                                    <a href="#"><span class="icon-instagram"></span></a>
+                                                    <a href="#"><span class="icon-youtube"></span></a>
+                                                </div>
+                                            </div>
+                                            <div class="team-one__title-box">
+                                                <h3><a href="team.html">Dianne Russell</a></h3>
+                                                <p>Junior Poster</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                        <!--Team One Single End-->
+                        <!--Team One Single Start-->
+                                <!-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                                    <div class="team-one__single">
+                                        <div class="team-one__img-box">
+                                            <div class="team-one__img">
+                                                <img src="assets/images/team/team-1-4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="team-one__content">
+                                            <div class="team-one__social-list">
+                                                <div class="team-one__social-plus-minus">
+                                                    <p>
+                                                        <span class="icon-plus team-one__plus"></span>
+                                                        <span class="icon-minus team-one__minus"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="team-one__social">
+                                                    <a href="#"><span class="icon-facebook"></span></a>
+                                                    <a href="#"><span class="icon-twitter"></span></a>
+                                                    <a href="#"><span class="icon-instagram"></span></a>
+                                                    <a href="#"><span class="icon-youtube"></span></a>
+                                                </div>
+                                            </div>
+                                            <div class="team-one__title-box">
+                                                <h3><a href="team.html">Marvin McKinney</a></h3>
+                                                <p>Junior Poster</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                        <!--Team One Single End-->
                     </div>
-                    <h2 class="section-title__title title-animation">Events Schedule Upcoming
-                        <br> Events.</h2>
+                        <!-- <div class="team-one__btn-box">
+                            <a href="team.html" class="team-one__btn thm-btn"><span>See All</span><i
+                                    class="icon-arrow-up"></i></a>
+                        </div> -->
                 </div>
-                <div class="row">
-                    <!--Team One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <div class="team-one__social-list">
-                                    <div class="team-one__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-one__plus"></span>
-                                            <span class="icon-minus team-one__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-one__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                                <div class="team-one__title-box">
-                                    <h3><a href="team.html">Leslie Alexander</a></h3>
-                                    <p>Junior Poster</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <div class="team-one__social-list">
-                                    <div class="team-one__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-one__plus"></span>
-                                            <span class="icon-minus team-one__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-one__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                                <div class="team-one__title-box">
-                                    <h3><a href="team.html">Annette Black</a></h3>
-                                    <p>Senior Poster</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-3.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <div class="team-one__social-list">
-                                    <div class="team-one__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-one__plus"></span>
-                                            <span class="icon-minus team-one__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-one__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                                <div class="team-one__title-box">
-                                    <h3><a href="team.html">Dianne Russell</a></h3>
-                                    <p>Junior Poster</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="team-one__single">
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/team/team-1-4.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <div class="team-one__social-list">
-                                    <div class="team-one__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-one__plus"></span>
-                                            <span class="icon-minus team-one__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-one__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                                <div class="team-one__title-box">
-                                    <h3><a href="team.html">Marvin McKinney</a></h3>
-                                    <p>Junior Poster</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                </div>
-                <div class="team-one__btn-box">
-                    <a href="team.html" class="team-one__btn thm-btn"><span>See All</span><i
-                            class="icon-arrow-up"></i></a>
-                </div>
-            </div>
-        </section>
+            </section>
         <!--Team One End -->
 
         <!--Testimonial One Start -->
         <section class="testimonial-one">
             <div class="testimonial-one__bg" data-jarallax data-speed="0.3" data-imgPosition="100% 100%"
-                style="background-image: url(assets/images/backgrounds/testimonial-one-bg.jpg);"></div>
+                style="background-image: url(assets/images/backgrounds/testimonial-one-bg.png);"></div>
             <div class="testimonial-one__quote">
                 <img src="assets/images/icon/quote.png" alt="">
             </div>
@@ -804,7 +806,7 @@ $colorIndex = 0;
                     <div class="item">
                         <div class="testimonial-one__single">
                             <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with Chioary and I’m continually inspired by the
+                                <br> with MNLPand I’m continually inspired by the
                                 <br> dedication and passion of the team.</p>
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img">
@@ -822,7 +824,7 @@ $colorIndex = 0;
                     <div class="item">
                         <div class="testimonial-one__single">
                             <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with Chioary and I’m continually inspired by the
+                                <br> with MNLPand I’m continually inspired by the
                                 <br> dedication and passion of the team.</p>
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img">
@@ -840,7 +842,7 @@ $colorIndex = 0;
                     <div class="item">
                         <div class="testimonial-one__single">
                             <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with Chioary and I’m continually inspired by the
+                                <br> with MNLPand I’m continually inspired by the
                                 <br> dedication and passion of the team.</p>
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img">
@@ -858,7 +860,7 @@ $colorIndex = 0;
                     <div class="item">
                         <div class="testimonial-one__single">
                             <p class="testimonial-one__text">I’ve had the privilege of volunteering
-                                <br> with Chioary and I’m continually inspired by the
+                                <br> with MNLPand I’m continually inspired by the
                                 <br> dedication and passion of the team.</p>
                             <div class="testimonial-one__client-info">
                                 <div class="testimonial-one__client-img">
@@ -979,140 +981,74 @@ $colorIndex = 0;
                         <div class="section-title__tagline-box">
                             <div class="section-title__tagline-shape"></div>
                             <span class="section-title__tagline">Our Blog</span>
+                           
                         </div>
-                        <h2 class="section-title__title title-animation">Frequently asking
-                            <br> questions.</h2>
+                        <h2 class="section-title__title title-animation ">Blogs.</h2>
                     </div>
                     <div class="blog-one__top-btn-box">
-                        <a href="blog.html" class="blog-one__top-btn thm-btn"><span>See All Blog</span><i
-                                class="icon-arrow-up"></i></a>
+                        <a href="blog.php" class="blog-one__top-btn thm-btn"><span>See All Blog</span><i class="icon-arrow-up"></i></a>
                     </div>
                 </div>
                 <div class="row">
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img-box">
-                                <div class="blog-one__img">
-                                    <img src="assets/images/blog/blog-1-1.jpg" alt="">
-                                    <div class="blog-one__plus">
-                                        <a href="blog-details.html"><span class="icon-plus"></span></a>
+                    <?php
+                    if ($result && $result->num_rows > 0) {
+                        while ($blog = $result->fetch_assoc()) {
+                            ?>
+                            <!--Blog One Single Start-->
+                            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
+                                <div class="blog-one__single">
+                                    <div class="blog-one__img-box">
+                                        <div class="blog-one__img">
+                                            <img src="<?= $blog['image'] ? htmlspecialchars($blog['image']) : 'assets/images/blog/default.jpg'; ?>" alt="">
+                                            <div class="blog-one__plus">
+                                                <a href="blog-details.php?id=<?= $blog['id']; ?>"><span class="icon-plus"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="blog-one__date">
+                                            <div class="blog-one__date-shape-1">
+                                                <img src="assets/images/shapes/blog-one-date-shape-1.png" alt="">
+                                            </div>
+                                            <div class="blog-one__date-shape-2">
+                                                <img src="assets/images/shapes/blog-one-date-shape-2.png" alt="">
+                                            </div>
+                                            <p><?= date('d M Y', strtotime($blog['event_date'])); ?></p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="blog-one__date">
-                                    <div class="blog-one__date-shape-1">
-                                        <img src="assets/images/shapes/blog-one-date-shape-1.png" alt="">
+                                    <div class="blog-one__content">
+                                        <ul class="blog-one__meta list-unstyled">
+                                            <li>
+                                                <a href="#"><span class="icon-user-two"></span>Admin</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><span class="icon-chat"></span>0 Comments</a>
+                                            </li>
+                                        </ul>
+                                        <h3 class="blog-one__title">
+                                            <a href="blog-details.php?id=<?= $blog['id']; ?>"><?= htmlspecialchars($blog['title']); ?></a>
+                                        </h3>
+                                        <div class="blog-one__btn-box">
+                                            <a href="blog-details.php?id=<?= $blog['id']; ?>" class="blog-one__btn thm-btn">
+                                                <span>Read More</span><i class="icon-arrow-up"></i>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="blog-one__date-shape-2">
-                                        <img src="assets/images/shapes/blog-one-date-shape-2.png" alt="">
-                                    </div>
-                                    <p>10 Aug 2024</p>
                                 </div>
                             </div>
-                            <div class="blog-one__content">
-                                <ul class="blog-one__meta list-unstyled">
-                                    <li>
-                                        <a href="#"><span class="icon-user-two"></span>By cane Anderson</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="icon-chat"></span>02 Comment</a>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-one__title"><a href="blog-details.html">One such example is our recent
-                                        food distribution program.</a></h3>
-                                <div class="blog-one__btn-box">
-                                    <a href="blog-details.html" class="blog-one__btn thm-btn"><span>Read More</span><i
-                                            class="icon-arrow-up"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img-box">
-                                <div class="blog-one__img">
-                                    <img src="assets/images/blog/blog-1-2.jpg" alt="">
-                                    <div class="blog-one__plus">
-                                        <a href="blog-details.html"><span class="icon-plus"></span></a>
-                                    </div>
-                                </div>
-                                <div class="blog-one__date">
-                                    <div class="blog-one__date-shape-1">
-                                        <img src="assets/images/shapes/blog-one-date-shape-1.png" alt="">
-                                    </div>
-                                    <div class="blog-one__date-shape-2">
-                                        <img src="assets/images/shapes/blog-one-date-shape-2.png" alt="">
-                                    </div>
-                                    <p>25 June 2024</p>
-                                </div>
-                            </div>
-                            <div class="blog-one__content">
-                                <ul class="blog-one__meta list-unstyled">
-                                    <li>
-                                        <a href="#"><span class="icon-user-two"></span>By cane Anderson</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="icon-chat"></span>02 Comment</a>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-one__title"><a href="blog-details.html">the impact of our community
-                                        doesn’t stop at food distribution.</a></h3>
-                                <div class="blog-one__btn-box">
-                                    <a href="blog-details.html" class="blog-one__btn thm-btn"><span>Read More</span><i
-                                            class="icon-arrow-up"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="blog-one__single">
-                            <div class="blog-one__img-box">
-                                <div class="blog-one__img">
-                                    <img src="assets/images/blog/blog-1-3.jpg" alt="">
-                                    <div class="blog-one__plus">
-                                        <a href="blog-details.html"><span class="icon-plus"></span></a>
-                                    </div>
-                                </div>
-                                <div class="blog-one__date">
-                                    <div class="blog-one__date-shape-1">
-                                        <img src="assets/images/shapes/blog-one-date-shape-1.png" alt="">
-                                    </div>
-                                    <div class="blog-one__date-shape-2">
-                                        <img src="assets/images/shapes/blog-one-date-shape-2.png" alt="">
-                                    </div>
-                                    <p>15 March 2024</p>
-                                </div>
-                            </div>
-                            <div class="blog-one__content">
-                                <ul class="blog-one__meta list-unstyled">
-                                    <li>
-                                        <a href="#"><span class="icon-user-two"></span>By cane Anderson</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="icon-chat"></span>02 Comment</a>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-one__title"><a href="blog-details.html">These stories are just a few
-                                        examples of how powerful.</a></h3>
-                                <div class="blog-one__btn-box">
-                                    <a href="blog-details.html" class="blog-one__btn thm-btn"><span>Read More</span><i
-                                            class="icon-arrow-up"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
+                            <!--Blog One Single End-->
+                            <?php
+                        }
+                    } else {
+                        echo '<p>No blogs found.</p>';
+                    }
+                    ?>
                 </div>
             </div>
         </section>
+
         <!--Blog One End -->
 
         <!--Newsletter One Start -->
-        <section class="newsletter-one">
+        <!-- <section class="newsletter-one">
             <div class="newsletter-one__bg"
                 style="background-image: url(assets/images/backgrounds/newsletter-one-bg.jpg);"></div>
             <div class="container">
@@ -1129,7 +1065,7 @@ $colorIndex = 0;
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--Newsletter One End -->
 </body>
 

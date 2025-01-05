@@ -6,6 +6,8 @@
     display: block;
     background-color: var(--chioary-black);
     z-index: 10;
+    padding:0;
+    margin-bottom: 0;
 }
 
 .main-slider__social-box {
@@ -606,18 +608,100 @@
 }
 
 
+/* General Styles for Main Slider */
+.main-slider {
+    position: relative;
+    display: block;
+    background-color: var(--chioary-black);
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .main-slider__bg {
+    height: 400px; /* Default height */
+    width: 100%; /* Ensure full container width */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  @media (min-width: 768px) {
+    .main-slider__bg {
+      height: 600px; /* Adjust height for larger screens */
+    }
+  }
+  
+  .main-slider__map {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Main Slider Images - Ensure they fit container */
+  .main-slider__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and fill container */
+    object-position: center; /* Center the image */
+  }
+
+
+.main-slider__bg {
+  height: 400px; /* Set a fixed height */
+}
+
+@media (min-width: 768px) {
+  .main-slider__bg {
+      height: 600px; /* Adjust height for larger screens */
+  }
+}
+.main-slider__bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%; /* Ensure it spans the full container height */
+  width: 100%; /* Ensure it spans the full container width */
+}
+
+.main-slider__map {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
 
 
 
 
+.main-slider__bg {
+    height: 400px; /* Set a fixed height */
+  }
+  
+  @media (min-width: 768px) {
+    .main-slider__bg {
+        height: 600px; /* Adjust height for larger screens */
+    }
+  }
+  .main-slider__bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%; /* Ensure it spans the full container height */
+    width: 100%; /* Ensure it spans the full container width */
+  }
+  
+  .main-slider__map {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }  
 
-
-
-
-
-
-
-
+  
 
 /*--------------------------------------------------------------
   # End

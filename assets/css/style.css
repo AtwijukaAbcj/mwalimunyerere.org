@@ -44,6 +44,7 @@
   --bs-gutter-y: 24px;
 }
 
+
 body {
   font-family: var(--chioary-font);
   color: var(--chioary-gray);
@@ -139,6 +140,9 @@ ul {
   min-width: 300px;
   overflow: hidden;
 }
+.img-rounded{
+  border-radius: 5px;
+}
 
 .container {
   padding-left: 12px;
@@ -187,8 +191,77 @@ ul {
   opacity: 0.4;
   z-index: -1;
 }
+/* Team page */
+/* Container Fix */
+.team-two .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between cards */
+    justify-content: center; /* Centers cards horizontally */
+}
 
+/* Card Styling */
+.team-two__single {
+    flex: 1 1 calc(25% - 20px); /* Four cards per row with equal spacing */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between;
+    align-items: center; /* Center content horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    height: 100%; /* Ensures cards have equal height */
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
+/* Card Hover Effect */
+.team-two__single:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Fix */
+.team-two__img {
+    width: 100%;
+    height: 250px; /* Enforce consistent image height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-two__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the container proportionally */
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.team-two__img img:hover {
+    filter: grayscale(0%);
+}
+
+/* Content Fix */
+.team-two__content {
+    padding: 20px;
+    flex-grow: 1; /* Ensures content stretches equally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text content vertically */
+    text-align: center;
+}
+
+/* Ensure buttons and text stay aligned */
+.team-two__content h3,
+.team-two__content p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+/* End team page */
 /*--------------------------------------------------------------
 # Custom Cursor
 --------------------------------------------------------------*/
@@ -288,6 +361,7 @@ ul {
   font-weight: 700;
   margin: 24px 0 0;
   text-transform: capitalize;
+  padding:20px;
 }
 
 .section-title__title .split-line {
@@ -1883,31 +1957,6 @@ ul {
 }
 
 
-.main-slider__bg {
-  height: 400px; /* Set a fixed height */
-}
-
-@media (min-width: 768px) {
-  .main-slider__bg {
-      height: 600px; /* Adjust height for larger screens */
-  }
-}
-.main-slider__bg {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%; /* Ensure it spans the full container height */
-  width: 100%; /* Ensure it spans the full container width */
-}
-
-.main-slider__map {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-}
-
 
 /*--------------------------------------------------------------
 # Edit All Css
@@ -2136,7 +2185,7 @@ ul {
   color: var(--chioary-black);
 }
 
-
+/* mainslider general css */
 .main-slider__btn span {
   background-color: var(--chioary-base);
 }
@@ -2227,6 +2276,29 @@ ul {
   background-color: var(--chioary-base);
 }
 
+/* 
+Projects page */
+.project-one__single {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px; /* Set height to ensure uniformity */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  margin-bottom: 0px;
+}
+.project-one__img-box {
+  height: 220px; /* Sets consistent height for image area */
+  overflow: hidden;
+}
+.project-one__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Team || Chioary || Chioary HTML 5 Template </title>
+    <title>Project Details || Chioary || Chioary HTML 5 Template </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="assets/css/module-css/newsletter.css" />
     <link rel="stylesheet" href="assets/css/module-css/page-header.css" />
     <link rel="stylesheet" href="assets/css/module-css/404.css" />
+    <link rel="stylesheet" href="assets/css/module-css/project.css" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -174,8 +175,7 @@
                                                                                 <!-- /.home-showcase__buttons -->
                                                                             </div><!-- /.home-showcase__image -->
                                                                             <h3 class="home-showcase__title">Home
-                                                                                Page
-                                                                                03
+                                                                                Page 03
                                                                             </h3><!-- /.home-showcase__title -->
                                                                         </div><!-- /.home-showcase__item -->
                                                                     </div><!-- /.col-lg-3 -->
@@ -278,12 +278,12 @@
                     <div class="page-header__shape-1">
                         <img src="assets/images/shapes/page-header-shape-1.png" alt="">
                     </div>
-                    <h2>Team</h2>
+                    <h2>Project Details</h2>
                     <div class="thm-breadcrumb__box">
                         <ul class="thm-breadcrumb list-unstyled">
                             <li><a href="index.html">Home</a></li>
                             <li><span>-</span></li>
-                            <li>Team</li>
+                            <li>Project Details</li>
                         </ul>
                     </div>
                 </div>
@@ -291,256 +291,107 @@
         </section>
         <!--Page Header End-->
 
-        <!--Team Two Start -->
-        <section class="team-two team-page">
+
+        <!--Project Details Start-->
+        <section class="project-details">
             <div class="container">
-                <div class="row">
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-1.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
+                <!-- Project Main Image and Information -->
+                <div class="project-details__img">
+                    <img src="<?= htmlspecialchars($project['image_url']); ?>" alt="<?= htmlspecialchars($project['title']); ?>">
+                    <div class="project-details__info-box">
+                        <div class="project-details__info-title-box">
+                            <h3 class="project-details__info-title"><?= htmlspecialchars($project['title']); ?></h3>
+                        </div>
+                        <div class="project-details__info-and-social">
+                            <div class="project-details__info">
+                                <ul class="project-details__info-list list-unstyled">
+                                    <li>
+                                        <p>Name:<span><?= htmlspecialchars($project['title']); ?></span></p>
+                                    </li>
+                                    <li>
+                                        <p>Author:<span><?= htmlspecialchars($project['author']); ?></span></p>
+                                    </li>
+                                </ul>
+                                <ul class="project-details__info-list list-unstyled">
+                                    <li>
+                                        <p>Date:<span><?= date('F d, Y', strtotime($project['created_at'])); ?></span></p>
+                                    </li>
+                                    <li>
+                                        <p>Tags:<span><?= htmlspecialchars($project['tags']); ?></span></p>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Leslie Alexander</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
+                            <div class="project-details__social">
+                                <a href="#"><span class="icon-instagram"></span></a>
+                                <a href="#"><span class="icon-twitter"></span></a>
+                                <a href="#"><span class="icon-facebook"></span></a>
                             </div>
                         </div>
                     </div>
-                    <!--Team Two Single End-->
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-2.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Dianne Russell</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team Two Single End-->
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-3.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Ralph Edwards</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team Two Single End-->
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-4.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Annette Black</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team Two Single End-->
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-5.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Brooklyn Simmons</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team Two Single End-->
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-6.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Guy Hawkins</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team Two Single End-->
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-7.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Ronald Richards</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team Two Single End-->
-                    <!--Team Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                        <div class="team-two__single">
-                            <div class="team-two__img-box">
-                                <div class="team-two__img">
-                                    <img src="assets/images/team/team-2-8.jpg" alt="">
-                                </div>
-                                <div class="team-two__social-list">
-                                    <div class="team-two__social-plus-minus">
-                                        <p>
-                                            <span class="icon-plus team-two__plus"></span>
-                                            <span class="icon-minus team-two__minus"></span>
-                                        </p>
-                                    </div>
-                                    <div class="team-two__social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                        <a href="#"><span class="icon-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-two__content">
-                                <h3 class="team-two__title"><a href="team.html">Marvin McKinney</a></h3>
-                                <p class="team-two__text">Junior Poster</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team Two Single End-->
                 </div>
-                <div class="prev-and-next">
+        
+                <!-- Project Content -->
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="project-details__left">
+                            <h3 class="project-details__title-1"><?= htmlspecialchars($project['title']); ?></h3>
+                            <p class="project-details__text-1"><?= htmlspecialchars($project['description']); ?></p>
+                            <ul class="project-details__points list-unstyled">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-right-arrow"></span>
+                                    </div>
+                                    <p>Hope Restoration</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-right-arrow"></span>
+                                    </div>
+                                    <p>Giving Back</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-right-arrow"></span>
+                                    </div>
+                                    <p>Positive Impact</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Project Additional Images -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="project-details__right">
+                            <div class="project-details__right-img-1">
+                                <img src="assets/images/project/project-details-right-img-1.jpg" alt="">
+                            </div>
+                            <div class="project-details__right-img-2">
+                                <img src="assets/images/project/project-details-right-img-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pagination -->
+                <div class="project-details__pagination">
                     <ul class="pg-pagination list-unstyled">
                         <li class="prev">
-                            <a href="blog-details.html" aria-label="prev">Prev</a>
+                            <a href="project-details.php?id=<?= $prev_id; ?>" aria-label="prev"><i class="icon-right-arrow"></i>Previous</a>
                         </li>
                         <li class="next">
-                            <a href="blog-details.html" aria-label="Next">Next</a>
+                            <a href="project-details.php?id=<?= $next_id; ?>" aria-label="Next">Next<i class="icon-right-arrow"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        <!--Team Two End -->
+        
+        <!--Project Details End-->
+
+
+
+
+
 
         <!--Newsletter One Start -->
         <section class="newsletter-one">

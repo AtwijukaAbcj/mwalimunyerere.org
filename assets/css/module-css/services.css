@@ -6,7 +6,8 @@
     display: block;
     overflow: hidden;
     background-color: #1A3A37;
-    padding: 150px 0 150px;
+    padding:150px 0 150px;
+    margin-top: 0;
     z-index: 1;
 }
 

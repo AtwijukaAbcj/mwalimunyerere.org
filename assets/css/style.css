@@ -582,15 +582,16 @@ ul {
   left: 0;
   right: 0;
   width: 100%;
-  background: transparent; /* Transparent background initially */
+  /* background: transparent; Transparent background initially */
   transition: all 500ms ease; /* Smooth transition */
   z-index: 999;
+  background: #90a39456;
 }
 
 .main-header.sticky {
   position: fixed; /* Fixes the menu on top */
   top: 0;
-  background: #ffffff11; /* Optional: Add background color when sticky */
+  background: #ffffff3c; /* Optional: Add background color when sticky */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
   animation: slide-down 0.3s ease-in-out; /* Smooth slide-in effect */
 }
@@ -2156,6 +2157,10 @@ ul {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
   z-index: -1; /* Places the overlay behind the text */
   border-radius: 8px; /* Optional: Add rounded corners for the overlay */
+}
+
+.courses-one__tag a{
+  color: #FFA415 !important;
 }
 
 

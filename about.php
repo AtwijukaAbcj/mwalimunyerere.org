@@ -1,29 +1,7 @@
 <?php 
 include('header.php');
 include('root/config.php');
-?>
-<body class="custom-cursor">
-
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
-
-
-
-
-    <div class="page-wrapper">
-
-        <div class="stricky-header stricked-menu main-menu">
-            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
-
-
-
-        <!--Page Header Start-->
+?>        <!--Page Header Start-->
         <section class="page-header">
             <div class="page-header__bg-shape"
                 style="background-image: url(assets/images/shapes/page-header-bg-shape.png);">
@@ -1766,8 +1744,6 @@ include('root/config.php');
             </div>
         </section>
         <!--Newsletter One End -->
-
-</body>
 
 <?php 
 include('footer.php');

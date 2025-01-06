@@ -29,6 +29,9 @@ $sql_events = "SELECT title, description, event_date, event_time, location, imag
                LIMIT 2";
 $result_events = $conn->query($sql_events);
 
+$sql_cause = "SELECT * FROM causes ORDER BY created_at DESC LIMIT 3";
+$result_cause = $conn->query($sql_cause);
+
 // Fetch the latest featured cause
 
 // SQL to fetch the most recent cause
@@ -376,7 +379,7 @@ $colorIndex = 0;
 
         <!--Counter One End -->
 
-        <!--Courses One Start -->
+        <!--causes One Start -->
 
         <section class="courses-one">
             <div class="courses-one__shape-1 float-bob img-rounded">
@@ -406,8 +409,6 @@ $colorIndex = 0;
                                     <div class="tabs-content__inner">
                                         <div class="owl-carousel owl-theme">
                                             <?php
-                                            $sql_cause = "SELECT * FROM causes ORDER BY created_at DESC LIMIT 3";
-                                            $result_cause = $conn->query($sql_cause);
 
                                             if ($result_cause && $result_cause->num_rows > 0):
                                                 while ($cause = $result_cause->fetch_assoc()):
@@ -481,7 +482,7 @@ $colorIndex = 0;
 
 
 
-        <!--Courses One End -->
+        <!--causes One End -->
 
         <!--Event One Start -->
 

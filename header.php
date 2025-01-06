@@ -1,3 +1,6 @@
+<?php
+$cart_count = array_sum($_SESSION['cart'] ?? []);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,6 +121,11 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+
+
 </head>
 
 <body class="custom-cursor">
@@ -163,7 +171,30 @@
                                         <li><a href="team.php">Our Team</a></li>
                                         <li><a href="events.php">Events</a></li>
                                         <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="causes.php">Causes</a></li>
+                                
+
+<!-- Right Side: Bell Dropdown and Donate Button -->
+
+      <!-- Right Side: Bell Dropdown and Donate Button -->
+      <div class="d-flex align-items-center">
+          <!-- Bell Dropdown -->
+          <div class="nav-item dropdown mr-3">
+              <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell"></i> <span class="badge badge-danger" id="cartCount">0</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cartDropdown" style="width: 300px; max-height: 400px; overflow-y: auto;">
+                  <h6 class="dropdown-header">Cart Items</h6>
+                  <div id="cartItems">
+                      <!-- Cart items will be dynamically loaded here -->
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <a href="checkout.php" class="dropdown-item text-center">Go to Checkout</a>
+              </div>
+          </div>
+
+
+                                
                                         <div class="main-menu__right">
                                             <a href="#" class="main-menu__search icon-search"></a>
                                             <a href="#" class="main-menu__user icon-people"></a>
@@ -176,5 +207,23 @@
                     </div>
                 </nav>
 
-        </header>
+    </header>
 
+    <script>
+    function addToCart(causeId) {
+        // Perform an AJAX request to add the item to the cart
+        fetch(`cart.php?action=add&id=${causeId}`)
+            .then(response => response.json())
+            .then(data => {
+                // Update cart badge count
+                document.getElementById('cartCount').innerText = data.cartCount;
+
+                // Update cart dropdown items
+                const cartItemsContainer = document.getElementById('cartItems');
+                cartItemsContainer.innerHTML = data.cartItemsHtml;
+            })
+            .catch(error => {
+                console.error('Error adding to cart:', error);
+            });
+    }
+</script>

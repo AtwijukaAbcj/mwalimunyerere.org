@@ -524,7 +524,7 @@ $colorIndex = 0;
                                 <h3 class="video-one__need-help-dolor">$72,000</h3>
                                 <p class="video-one__need-help-donate">Donation Collected</p>
                                 <div class="video-one__need-help-btn-box">
-                                    <a href="courses-details.html" class="video-one__btn thm-btn"><span>Donate
+                                    <a href="cause-details.php" class="video-one__btn thm-btn"><span>Donate
                                             Now</span><i class="icon-arrow-up"></i></a>
                                 </div>
                             </div>

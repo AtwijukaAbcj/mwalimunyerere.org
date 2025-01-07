@@ -82,7 +82,7 @@
     font-size: 32px;
     font-weight: 700;
     line-height: 42px;
-    font-style: italic;
+    /* font-style: italic; */
     color: var(--chioary-white);
 }
 

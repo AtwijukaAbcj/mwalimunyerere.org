@@ -138,78 +138,68 @@ $cart_count = array_sum($_SESSION['cart'] ?? []);
     </div>
     <!-- /.preloader -->
     <div class="page-wrapper">
-        <header class="main-header">
-            <div class="main-menu__top">
+<header class="main-header">
+    <div class="main-menu__top">
+        <div class="container">
+            <div class="main-menu__top-inner">
+                <p class="main-menu__top-text">Mail: info@mwalimunyerere.org | Contact: +25412323232</p>
+                <div class="main-menu__top-btn">
+                    <a href="#" class="btn btn-primary btn-sm">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main-menu-div" class="main-menu-div">
+        <nav class="main-menu">
+            <div class="main-menu__wrapper">
                 <div class="container">
-                    <div class="main-menu__top-inner">
-                        <p class="main-menu__top-text">Mail:info@mwalimunyerere.org Contact: +25412323232</p>
-                        <div class="main-menu__top-btn">
-                            <a href="#"> <span class="icon-right-arrow1"></span>Donate Now</a>
+                    <div class="main-menu__wrapper-inner">
+                        <div class="main-menu__left">
+                            <a href="index.php" class="main-menu__logo">
+                                <img src="assets/images/resources/logo-1.png" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="main-menu__main-menu-box">
+                            <ul class="main-menu__list">
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="about.php">About</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Projects</a>
+                                    <ul class="shadow-box">
+                                        <li><a href="project.php">All Projects</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="team.php">Our Team</a></li>
+                                <li><a href="events.php">Events</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="causes.php">Causes</a></li>
+                            </ul>
+                        </div>
+                        <div class="main-menu__right d-flex align-items-center">
+                            <div class="nav-item dropdown mr-3">
+                                <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-bell"></i> <span class="badge badge-danger" id="cartCount"><?= $cart_count ?></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cartDropdown" style="width: 300px; max-height: 400px; overflow-y: auto;">
+                                    <h6 class="dropdown-header">Cart Items</h6>
+                                    <div id="cartItems">
+                                        <!-- Cart items will be dynamically loaded here -->
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="checkout.php" class="dropdown-item text-center">Go to Checkout</a>
+                                </div>
+                            </div>
+                            <a href="#" class="main-menu__search icon-search"></a>
+                            <a href="#" class="main-menu__user icon-people"></a>
                         </div>
                     </div>
                 </div>
             </div>
-                <nav class="main-menu">
-                    <div class="main-menu__wrapper">
-                        <div class="container">
-                            <div class="main-menu__wrapper-inner">
-                                <div class="main-menu__left">
-                                    <div class="main-menu__logo">
-                                        <a href="index.php"><img src="assets/images/resources/logo-1.png" alt="Logo"></a>
-                                    </div>
-                                </div>
-                                <div class="main-menu__main-menu-box">
-                                    <ul class="main-menu__list">
-                                        <li><a href="index.php">Home</a></li>
-                                        <li><a href="about.php">About</a></li>
-                                        <li class="dropdown">
-                                            <a href="#">Projects</a>
-                                            <ul class="shadow-box">
-                                                <li><a href="project.php">All Projects</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="team.php">Our Team</a></li>
-                                        <li><a href="events.php">Events</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="causes.php">Causes</a></li>
-                                
+        </nav>
+    </div>
+</header>
 
-<!-- Right Side: Bell Dropdown and Donate Button -->
-
-      <!-- Right Side: Bell Dropdown and Donate Button -->
-      <div class="d-flex align-items-center">
-          <!-- Bell Dropdown -->
-          <div class="nav-item dropdown mr-3">
-              <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-bell"></i> <span class="badge badge-danger" id="cartCount">0</span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cartDropdown" style="width: 300px; max-height: 400px; overflow-y: auto;">
-                  <h6 class="dropdown-header">Cart Items</h6>
-                  <div id="cartItems">
-                      <!-- Cart items will be dynamically loaded here -->
-                  </div>
-                  <div class="dropdown-divider"></div>
-                  <a href="checkout.php" class="dropdown-item text-center">Go to Checkout</a>
-              </div>
-          </div>
-
-
-                                
-                                        <div class="main-menu__right">
-                                            <a href="#" class="main-menu__search icon-search"></a>
-                                            <a href="#" class="main-menu__user icon-people"></a>
-                                        </div>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-
-    </header>
-
-    <script>
+<script>
     function addToCart(causeId) {
         // Perform an AJAX request to add the item to the cart
         fetch(`cart.php?action=add&id=${causeId}`)
@@ -226,4 +216,19 @@ $cart_count = array_sum($_SESSION['cart'] ?? []);
                 console.error('Error adding to cart:', error);
             });
     }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const mainMenuDiv = document.getElementById("main-menu-div");
+    const stickyOffset = mainMenuDiv.offsetTop; // Get the initial position of the menu
+
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > stickyOffset) {
+            mainMenuDiv.classList.add("sticky");
+        } else {
+            mainMenuDiv.classList.remove("sticky");
+        }
+    });
+});
+
 </script>

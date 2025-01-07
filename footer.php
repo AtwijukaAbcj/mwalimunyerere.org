@@ -18,7 +18,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="footer-widget__about">
                             <div class="footer-widget__about-logo">
-                                <a href="index.html"><img src="assets/images/resources/footer-logo-1.png" alt=""></a>
+                                <a href="index.html"><img src="assets/images/resources/footer-logo-1.png" alt="" class="footer-logo"></a>
                             </div>
                             <p class="footer-widget__about-text">Inspired by Mwalimu Julius Nyerere's vision, we empower communities through education, innovation, and sustainable development.</p>
                             <div class="site-footer__social">

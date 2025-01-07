@@ -96,11 +96,10 @@ include 'header.php'; // Include header only after header() modifications are do
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="courses-one__btn-box">
-                                    <button onclick="addToCartAndCheckout(<?= $row['id'] ?>)" class="courses-one__btn thm-btn">
+                                <div>
+                                    <a onclick="addToCartAndCheckout(<?= $row['id'] ?>)" class="courses-one__btn thm-btn">
                                         <span>Donate Now</span><i class="icon-arrow-up"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

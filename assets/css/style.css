@@ -70,6 +70,14 @@ a:focus,
 a:visited {
   text-decoration: none;
 }
+a {
+  text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+  text-decoration: none !important; /* Ensure no underline appears on hover */
+}
+
 
 ::-webkit-input-placeholder {
   color: inherit;
@@ -587,9 +595,26 @@ ul {
   z-index: 999;
   background: #90a39456;
 }
+/* Default styles for main-menu-div */
+.main-menu-div {
+  position: relative;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other elements */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sticky styles */
+.main-menu-div.sticky {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff52; /* Add a background color to avoid transparency issues */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  z-index: 1000;
+}
+
 
 .main-header.sticky {
-  position: fixed; /* Fixes the menu on top */
+
   top: 0;
   background: #ffffff3c; /* Optional: Add background color when sticky */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
@@ -652,6 +677,7 @@ ul {
 }
 
 .main-menu {
+  position: fixed;
   position: relative;
   display: block;
 }
@@ -2055,6 +2081,7 @@ ul {
 
 .courses-one__btn-box {
   margin-top: auto; /* Push button area to the bottom */
+  border: none;
 }
 
 
